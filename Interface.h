@@ -1,0 +1,25 @@
+#ifndef INTERFEJS_H
+
+#define INTERFEJS_H
+
+
+#include <iostream>
+#include "AuxiliaryMethods.h"
+
+
+using namespace std;
+
+class Menu
+{
+
+
+public:
+    char openingMenu();
+
+
+};
+
+
+
+
+#endif // INTERFEJS_H
