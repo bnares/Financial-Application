@@ -42,6 +42,8 @@
 		<Unit filename="LoggedUserManager.h" />
 		<Unit filename="Markup.cpp" />
 		<Unit filename="Markup.h" />
+		<Unit filename="Result.cpp" />
+		<Unit filename="Result.h" />
 		<Unit filename="User.cpp" />
 		<Unit filename="User.h" />
 		<Unit filename="UserMenager.cpp" />

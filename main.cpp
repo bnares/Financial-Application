@@ -49,7 +49,13 @@ int main()
             cout<<"now you are in else"<<endl;
             char loggedInChoice;
             loggedInChoice = menu.loggedInMenu();
-            break;
+            switch(loggedInChoice)
+            {
+            case '1':
+                {
+                    ;
+                }
+            }
         }
 
     }
