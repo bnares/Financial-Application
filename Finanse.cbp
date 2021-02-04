@@ -36,6 +36,8 @@
 		<Unit filename="AuxiliaryMethods.h" />
 		<Unit filename="FinancialApp.cpp" />
 		<Unit filename="FinancialApp.h" />
+		<Unit filename="Income.cpp" />
+		<Unit filename="Income.h" />
 		<Unit filename="Interface.cpp" />
 		<Unit filename="Interface.h" />
 		<Unit filename="LoggedUserManager.cpp" />

@@ -1,6 +1,6 @@
 #ifndef RESULT_H
 
-#defineRESULT_H
+#define RESULT_H
 #include <iostream>
 
 using namespace std;

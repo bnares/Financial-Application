@@ -3,7 +3,7 @@
 	"AplikacjaFinansowa.h"
 	<iostream>
 
-1612461187 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\main.cpp
+1612470373 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\main.cpp
 	<iostream>
 	"Interface.h"
 	"FinancialApp.h"
@@ -52,11 +52,11 @@
 	<iostream>
 	"UserMenager.h"
 
-1612284678 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\interface.h
+1612465084 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\interface.h
 	<iostream>
 	"AuxiliaryMethods.h"
 
-1612284687 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\interface.cpp
+1612465084 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\interface.cpp
 	<iostream>
 	"Interface.h"
 
@@ -94,4 +94,22 @@
 1612451139 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\loggedusermanager.cpp
 	<iostream>
 	"LoggedUserManager.h"
+
+1612475835 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\result.cpp
+	<iostream>
+	"Result.h"
+
+1612475911 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\result.h
+	<iostream>
+
+1612476822 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\income.cpp
+	"Income.h"
+	<iostream>
+
+1612476865 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\income.h
+	<iostream>
+	<vector>
+	"Result.h"
+	"Markup.h"
+	"AuxiliaryMethods.h"
 
