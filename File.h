@@ -9,7 +9,9 @@ using namespace std;
 
 class File
 {
-
+    const string FILE_NAME_WITH_INCOMES;
+    const string FILE_NAME_WITH_EXPENSESS;
+    int idNumberOfUser;
 };
 
 

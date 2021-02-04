@@ -11,6 +11,13 @@ UserFile :: UserFile(string usersFileName)
 }
 
 
+void UserFile :: setIdOfLoggedUser(int idToSet)
+{
+    idOfLoggedUser = idToSet;
+
+}
+
+
 int UserFile :: getLastUserId()
 {
     return lastUserId;
@@ -118,7 +125,7 @@ void UserFile :: userRegister()
 }
 
 
-int UserFile :: signIn()
+void UserFile :: signIn()
 {
     int occurances = 0;
     cout<<"Login: ";
@@ -149,7 +156,7 @@ int UserFile :: signIn()
                 cout<<"userID: "<<userId<<endl;
 
                 system("pause");
-                setLastUserId(AuxiliaryMethods ::convertStringToNUmber(userId));
+                setIdOfLoggedUser(AuxiliaryMethods ::convertStringToNUmber(userId));
                 return AuxiliaryMethods ::convertStringToNUmber(userId);
 
             }
@@ -160,7 +167,14 @@ int UserFile :: signIn()
     {
         cout<<"Nieprawidlowy login lub haslo"<<endl;
         system("pause");
-        setLastUserId(0);
+        setIdOfLoggedUser(0);
         return 0;
     }
+}
+
+
+
+int UserFile :: getIdLoggedUser()
+{
+    return idOfLoggedUser;
 }

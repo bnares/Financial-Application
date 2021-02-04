@@ -16,6 +16,7 @@ class UserMenager
 {
     const string FILE_NAME_WITH_USERS;
     int lastUserId;
+    int idOfLoggedUser;
     vector <User> users;
     UserFile userFile;
 
@@ -25,6 +26,7 @@ public:
     void userRegister();
     void signIn();
     int getLastUserId();
+    int getIdOfLoggedUser();
 };
 
 

@@ -18,7 +18,7 @@ void FinancialApp :: signIn()
     userMenager.signIn();
     if(userMenager.getLastUserId()!=1)
     {
-        loggedUserManager = new LoggedUserManager(userMenager.getLastUserId()-1, NAZWA_PLIKU_WYDATKI, NAZWA_PLIKU_DOCHODY);
+        loggedUserManager = new LoggedUserManager(idOfLoggedUser, NAZWA_PLIKU_WYDATKI, NAZWA_PLIKU_DOCHODY);
 
     }
 }
@@ -31,5 +31,12 @@ int FinancialApp :: getLastUserID()
 
 void FinancialApp :: setIdLoggedUser(int id)
 {
-    idLoggedUser = id;
+    idOfLoggedUser = id;
+}
+
+
+
+int FinancialApp :: getIdOfLoggedUser()
+{
+    return userMenager.getIdOfLoggedUser();
 }

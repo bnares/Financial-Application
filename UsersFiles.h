@@ -13,19 +13,22 @@ using namespace std;
 class UserFile
 {
     const string USERS_FILE_NAME;
+    int idOfLoggedUser;
     int lastUserId;
     CMarkup xml;
     int findLastUserId();
     void addUserToFile();
     void setLastUserId(int numberToSet);
+    void setIdOfLoggedUser(int idToSet);
 
 
 public:
     UserFile(string usersFileName);
     int getLastUserId();
+    int getIdLoggedUser();
 
     void userRegister();
-    int signIn();
+    void signIn();
 
 };
 

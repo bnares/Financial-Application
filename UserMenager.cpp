@@ -8,6 +8,7 @@ UserMenager :: UserMenager(string userFileName)
 : FILE_NAME_WITH_USERS(userFileName), userFile(FILE_NAME_WITH_USERS)
 {
     lastUserId = getLastUserId();
+    idOfLoggedUser = getIdOfLoggedUser();
 }
 
 void UserMenager :: userRegister()
@@ -28,4 +29,10 @@ int UserMenager :: getLastUserId()
 
 {
     return userFile.getLastUserId();
+}
+
+
+int UserMenager :: getIdOfLoggedUser()
+{
+    return userFile.getIdLoggedUser();
 }

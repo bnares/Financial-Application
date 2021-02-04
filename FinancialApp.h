@@ -10,7 +10,8 @@ using namespace std;
 
 class FinancialApp
 {
-        int idLoggedUser;
+
+        int idOfLoggedUser;
 
 
         public:
@@ -25,7 +26,8 @@ class FinancialApp
         {
 
             loggedUserManager = NULL;
-            idLoggedUser = userMenager.getLastUserId();
+
+            idOfLoggedUser = getIdOfLoggedUser();
 
         };
 
@@ -40,6 +42,7 @@ class FinancialApp
         int getLastUserID();
         void registerUser();
         void signIn();
+        int getIdOfLoggedUser();
 
 
 };
