@@ -38,6 +38,8 @@
 		<Unit filename="FinancialApp.h" />
 		<Unit filename="Interface.cpp" />
 		<Unit filename="Interface.h" />
+		<Unit filename="LoggedUserManager.cpp" />
+		<Unit filename="LoggedUserManager.h" />
 		<Unit filename="Markup.cpp" />
 		<Unit filename="Markup.h" />
 		<Unit filename="User.cpp" />

@@ -3,7 +3,7 @@
 	"AplikacjaFinansowa.h"
 	<iostream>
 
-1612381860 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\main.cpp
+1612456448 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\main.cpp
 	<iostream>
 	"Interface.h"
 	"FinancialApp.h"
@@ -26,13 +26,14 @@
 1612265642 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\aplikacjafinansowa.h
 	<iostream>
 
-1612381813 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\financialapp.cpp
+1612448720 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\financialapp.cpp
 	"FinancialApp.h"
 	<iostream>
 
-1612390963 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\financialapp.h
+1612457036 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\financialapp.h
 	<iostream>
 	"UserMenager.h"
+	"LoggedUserManager.h"
 
 1612381703 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\auxiliarymethods.cpp
 	<iostream>
@@ -86,4 +87,11 @@
 	<string.h>
 	<string>
 	<afx.h>
+
+1612450069 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\loggedusermanager.h
+	<iostream>
+
+1612451139 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\loggedusermanager.cpp
+	<iostream>
+	"LoggedUserManager.h"
 

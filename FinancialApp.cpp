@@ -4,12 +4,6 @@
 
 using namespace std;
 
-FinancialApp:: FinancialApp(string nazwaPlikuUzytkownicy, string nazwaPlikuDochody, string nazwaPlikuWydatki)
-: userMenager(nazwaPlikuUzytkownicy)
-{
-    ;
-}
-
 
 
 

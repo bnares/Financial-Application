@@ -6,9 +6,13 @@ using namespace std;
 
 int main()
 {
+    cout<<"WOW"<<endl;
     Menu menu;
+    cout<<"WOW"<<endl;
     FinancialApp financialApp("Uzytkownicy.xml", "Dochody.xml", "Wydatki.xml");
+    cout<<"WOW"<<endl;
     int controlValue = financialApp.userMenager.getLastUserId();
+    cout<<"control value: "<<controlValue<<endl;
 
 
 
@@ -39,6 +43,10 @@ int main()
                     exit(0);
                 }
             }
+        }
+        else
+        {
+
         }
 
     }
