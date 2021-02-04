@@ -146,10 +146,11 @@ int UserFile :: signIn()
                 cout<<"You have just signed in"<<endl;
                 cout<<"WELCOME "<<selectedUserLogin<<endl;
                 cout<<"pausa jest przez plik UsersFiles"<<endl;
+                cout<<"userID: "<<userId<<endl;
 
                 system("pause");
-                return AuxiliaryMethods ::convertStringToNUmber(userId);
                 setLastUserId(AuxiliaryMethods ::convertStringToNUmber(userId));
+                return AuxiliaryMethods ::convertStringToNUmber(userId);
 
             }
             xml.OutOfElem();

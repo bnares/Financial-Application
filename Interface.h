@@ -15,6 +15,7 @@ class Menu
 
 public:
     char openingMenu();
+    char loggedInMenu();
 
 
 };

@@ -20,6 +20,7 @@ class UserMenager
     UserFile userFile;
 
 public:
+
     UserMenager(string userFileName);
     void userRegister();
     void signIn();

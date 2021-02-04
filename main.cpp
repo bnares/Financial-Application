@@ -6,19 +6,17 @@ using namespace std;
 
 int main()
 {
-    cout<<"WOW"<<endl;
+
     Menu menu;
-    cout<<"WOW"<<endl;
     FinancialApp financialApp("Uzytkownicy.xml", "Dochody.xml", "Wydatki.xml");
-    cout<<"WOW"<<endl;
-    int controlValue = financialApp.userMenager.getLastUserId();
-    cout<<"control value: "<<controlValue<<endl;
+    int controlValue = 0;
+
 
 
 
     while(true)
     {
-        if(controlValue == 1)
+        if(controlValue == 0)
 
         {
 
@@ -35,7 +33,8 @@ int main()
             case '2':
                 {
                     financialApp.signIn();
-                    controlValue = financialApp.userMenager.getLastUserId();
+                    controlValue = financialApp.getLastUserID();
+                    financialApp.setIdLoggedUser(controlValue);
                     break;
                 }
             case '3':
@@ -46,7 +45,11 @@ int main()
         }
         else
         {
-
+            cout<<financialApp.getLastUserID()<<endl;
+            cout<<"now you are in else"<<endl;
+            char loggedInChoice;
+            loggedInChoice = menu.loggedInMenu();
+            break;
         }
 
     }
