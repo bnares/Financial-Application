@@ -3,7 +3,7 @@
 	"AplikacjaFinansowa.h"
 	<iostream>
 
-1612470373 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\main.cpp
+1612481815 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\main.cpp
 	<iostream>
 	"Interface.h"
 	"FinancialApp.h"
@@ -26,7 +26,7 @@
 1612265642 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\aplikacjafinansowa.h
 	<iostream>
 
-1612461051 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\financialapp.cpp
+1612481537 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\financialapp.cpp
 	"FinancialApp.h"
 	<iostream>
 
@@ -71,7 +71,7 @@
 	"User.h"
 	"UsersFiles.h"
 
-1612481020 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\usersfiles.cpp
+1612547525 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\usersfiles.cpp
 	<iostream>
 	"UsersFiles.h"
 
@@ -127,10 +127,15 @@
 	"Markup.h"
 	"AuxiliaryMethods.h"
 
-1612478611 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
+1612547439 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
 	"File.h"
 	<iostream>
 
-1612478942 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.h
+1612546417 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.h
 	<iostream>
+	<vector>
+	"Income.h"
+	"Expense.h"
+	"Markup.h"
+	"AuxiliaryMethods.h"
 

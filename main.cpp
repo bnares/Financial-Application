@@ -33,7 +33,7 @@ int main()
             case '2':
                 {
                     financialApp.signIn();
-                    controlValue = financialApp.getLastUserID();
+                    controlValue = financialApp.getIdOfLoggedUser();
                     financialApp.setIdLoggedUser(controlValue);
                     break;
                 }

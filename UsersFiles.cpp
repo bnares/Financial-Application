@@ -157,7 +157,7 @@ void UserFile :: signIn()
 
                 system("pause");
                 setIdOfLoggedUser(AuxiliaryMethods ::convertStringToNUmber(userId));
-                return AuxiliaryMethods ::convertStringToNUmber(userId);
+                //return AuxiliaryMethods ::convertStringToNUmber(userId);
 
             }
             xml.OutOfElem();
@@ -168,7 +168,7 @@ void UserFile :: signIn()
         cout<<"Nieprawidlowy login lub haslo"<<endl;
         system("pause");
         setIdOfLoggedUser(0);
-        return 0;
+        //return 0;
     }
 }
 
