@@ -57,9 +57,9 @@ void File :: setIdNumberOfTheLastActivity(int newLastNumberActivity)
 
 void File :: addToFile()
 {
-    cout<<"FILE_NAME: "<<FILE_NAME<<endl;
-    cout<<"IdNumberOfTheLastActivity: "<<idNumberOfTheLastActivity<<endl;
-    cout<<"FILE - addToFile()"<<endl;
+
+
+
     //int lengthOfTitle = FILE_NAME.length()-4;
     //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
     string mainTitleOfFile = modifyFileName(FILE_NAME);

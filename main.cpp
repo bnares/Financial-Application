@@ -58,11 +58,8 @@ int main()
                 }
             case '2':
                 {
-                    cout<<"Wybrales 2"<<endl;
+
                     financialApp.AddExpense();
-                    cout<<"Id logged: "<<financialApp.getIdOfLoggedUser()<<endl;
-                    cout<<"Id of last user: "<<financialApp.getLastUserID()<<endl;
-                    system("pause");
                     break;
                 }
             }

@@ -13,7 +13,7 @@ using namespace std;
 
 void ExpensesFile :: readFromFileData(vector <Expense> &expenses)
 {
-    cout<<"FILE_NAME in redFromFileData: "<<FILE_NAME<<endl;
+
 
     //int lengthOfTitle = FILE_NAME.length()-4;
     //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);

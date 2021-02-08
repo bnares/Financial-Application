@@ -57,7 +57,7 @@ int UserFile :: findLastUserId()
 
 void  UserFile :: addUserToFile()
 {
-    string id, login= "", password="kola", name="", surname="";
+    string id, login= "", password="", name="", surname="";
     vector <string> data = {login, password, name, surname};
 
 
@@ -152,11 +152,7 @@ int UserFile :: signIn()
             {
                 cout<<"You have just signed in"<<endl;
                 cout<<"WELCOME "<<selectedUserLogin<<endl;
-                cout<<"pausa jest przez plik UsersFiles"<<endl;
-                cout<<"userID: "<<userId<<endl;
                 int userNumber = AuxiliaryMethods ::convertStringToNUmber(userId);
-                cout<<"IdOfLoggedUser to set: "<<userNumber<<endl;
-
                 system("pause");
                 setIdOfLoggedUser(AuxiliaryMethods ::convertStringToNUmber(userId));
                 occurances+=1;
@@ -179,7 +175,6 @@ int UserFile :: signIn()
 
 int UserFile :: getIdLoggedUser()
 {
-    cout<<"idOfLoggedUser from UserFile "<<idOfLoggedUser<<endl;
-    system("pause");
+
     return idOfLoggedUser;
 }

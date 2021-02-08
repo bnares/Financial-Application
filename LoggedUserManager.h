@@ -32,4 +32,4 @@ public:
 
 
 
-#endif // LOGGEDUSERMANAGER_H
+#endif LOGGEDUSERMANAGER_H
