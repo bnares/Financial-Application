@@ -4,12 +4,20 @@
 
 using namespace std;
 
+string File :: modifyFileName(string fileName)
+{
+    int lengthOfWord = fileName.length()-4;
+    string word = fileName.erase(lengthOfWord,4);
+    return word;
+}
+
+
 
 int File :: findIdNumberOfTheLastActivity()
 {
     //int lengthOfTitle = FILE_NAME.length()-4;
     //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
-    string mainTitleOfFile = FILE_NAME;
+    string mainTitleOfFile = modifyFileName(FILE_NAME);
     int number=0;
     if(xml.Load(FILE_NAME.c_str()))
     {
@@ -54,7 +62,7 @@ void File :: addToFile()
     cout<<"FILE - addToFile()"<<endl;
     //int lengthOfTitle = FILE_NAME.length()-4;
     //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
-    string mainTitleOfFile = FILE_NAME;
+    string mainTitleOfFile = modifyFileName(FILE_NAME);
     string idActivity = "", idUser="", date="", descriptionOfActivity="", money="";
     idActivity = AuxiliaryMethods::convertNumberToString(idNumberOfTheLastActivity+1);
     idUser = AuxiliaryMethods::convertNumberToString(idNumberOfUser);

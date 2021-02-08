@@ -128,11 +128,11 @@
 	"Markup.h"
 	"AuxiliaryMethods.h"
 
-1612792277 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
+1612817851 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
 	"File.h"
 	<iostream>
 
-1612780384 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.h
+1612817851 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.h
 	<iostream>
 	<vector>
 	"Income.h"
@@ -142,7 +142,7 @@
 
 1612550791 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\filewithincomes.cpp
 
-1612792138 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\filewithexpenses.cpp
+1612817851 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\filewithexpenses.cpp
 	"FileWithExpenses.h"
 	<iostream>
 	"Expense.h"

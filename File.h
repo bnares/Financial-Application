@@ -21,6 +21,7 @@ class File
     int findIdNumberOfTheLastActivity();
     void setIdNumberOfTheLastActivity(int newLastNumberActivity);
     CMarkup xml;
+    string modifyFileName(string fileName);
 public:
     File(string fileName, int userId)
     : FILE_NAME(fileName), idNumberOfUser(userId)

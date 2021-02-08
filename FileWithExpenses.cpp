@@ -17,7 +17,7 @@ void ExpensesFile :: readFromFileData(vector <Expense> &expenses)
 
     //int lengthOfTitle = FILE_NAME.length()-4;
     //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
-    string mainTitleOfFile = FILE_NAME;
+    string mainTitleOfFile = modifyFileName(FILE_NAME);
     xml.FindElem();
     xml.IntoElem();
     while(xml.FindElem(mainTitleOfFile))
