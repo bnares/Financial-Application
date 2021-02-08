@@ -7,6 +7,7 @@
 #include "Result.h"
 #include "Markup.h"
 #include "AuxiliaryMethods.h"
+using namespace std;
 
 
 class Income : public Result
@@ -17,7 +18,7 @@ public:
     void setIncomeId(int newIncomeId);
 };
 
-using namespace std;
+
 
 
 

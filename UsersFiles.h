@@ -28,7 +28,7 @@ public:
     int getIdLoggedUser();
 
     void userRegister();
-    void signIn();
+    int signIn();
 
 };
 

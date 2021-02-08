@@ -38,6 +38,10 @@
 		<Unit filename="Expense.h" />
 		<Unit filename="File.cpp" />
 		<Unit filename="File.h" />
+		<Unit filename="FileWithExpenses.cpp" />
+		<Unit filename="FileWithExpenses.h" />
+		<Unit filename="FileWithIncomes.cpp" />
+		<Unit filename="FileWithIncomes.h" />
 		<Unit filename="FinancialApp.cpp" />
 		<Unit filename="FinancialApp.h" />
 		<Unit filename="Income.cpp" />

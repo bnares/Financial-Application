@@ -18,9 +18,9 @@ void UserMenager :: userRegister()
 }
 
 
-void UserMenager :: signIn()
+int UserMenager :: signIn()
 {
-    userFile.signIn();
+    return userFile.signIn();
 
 }
 

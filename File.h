@@ -14,7 +14,8 @@ using namespace std;
 
 class File
 {
-    const string FILE_NAME;
+    protected:
+    string FILE_NAME;
     int idNumberOfUser;
     int idNumberOfTheLastActivity;
     int findIdNumberOfTheLastActivity();
@@ -22,9 +23,9 @@ class File
     CMarkup xml;
 public:
     File(string fileName, int userId)
-    : FILE_NAME(fileName), idNumberOfUser(userId), idNumberOfTheLastActivity(findIdNumberOfTheLastActivity())
+    : FILE_NAME(fileName), idNumberOfUser(userId)
     {
-
+        idNumberOfTheLastActivity = findIdNumberOfTheLastActivity();
     };
 
     void addToFile();
@@ -39,3 +40,8 @@ public:
 
 
 #endif // FILE_H
+
+
+
+
+

@@ -2,6 +2,7 @@
 #include "Interface.h"
 #include "FinancialApp.h"
 
+
 using namespace std;
 
 int main()
@@ -53,7 +54,16 @@ int main()
             {
             case '1':
                 {
-                    ;
+                    break;
+                }
+            case '2':
+                {
+                    cout<<"Wybrales 2"<<endl;
+                    financialApp.AddExpense();
+                    cout<<"Id logged: "<<financialApp.getIdOfLoggedUser()<<endl;
+                    cout<<"Id of last user: "<<financialApp.getLastUserID()<<endl;
+                    system("pause");
+                    break;
                 }
             }
         }

@@ -1,0 +1,30 @@
+<Activities>
+<Wydatki.xml>
+<IdOfActivity>1</IdOfActivity>
+<UserId>1875865606</UserId>
+<Date>2021-02-08</Date>
+<Descritpion>1000</Descritpion>
+<Amount>1500</Amount>
+</Wydatki.xml>
+<Wydatki.xml>
+<IdOfActivity>2</IdOfActivity>
+<UserId>1875865606</UserId>
+<Date>1999-03-06</Date>
+<Descritpion>new income</Descritpion>
+<Amount>10000</Amount>
+</Wydatki.xml>
+<Wydatki.xml>
+<IdOfActivity>3</IdOfActivity>
+<UserId>2</UserId>
+<Date>1500-12-14</Date>
+<Descritpion>old date</Descritpion>
+<Amount>12</Amount>
+</Wydatki.xml>
+<Wydatki.xml>
+<IdOfActivity>4</IdOfActivity>
+<UserId>1</UserId>
+<Date>1410-08-15</Date>
+<Descritpion>100000</Descritpion>
+<Amount>10000000</Amount>
+</Wydatki.xml>
+</Activities>

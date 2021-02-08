@@ -125,7 +125,7 @@ void UserFile :: userRegister()
 }
 
 
-void UserFile :: signIn()
+int UserFile :: signIn()
 {
     int occurances = 0;
     cout<<"Login: ";
@@ -154,10 +154,13 @@ void UserFile :: signIn()
                 cout<<"WELCOME "<<selectedUserLogin<<endl;
                 cout<<"pausa jest przez plik UsersFiles"<<endl;
                 cout<<"userID: "<<userId<<endl;
+                int userNumber = AuxiliaryMethods ::convertStringToNUmber(userId);
+                cout<<"IdOfLoggedUser to set: "<<userNumber<<endl;
 
                 system("pause");
                 setIdOfLoggedUser(AuxiliaryMethods ::convertStringToNUmber(userId));
-                //return AuxiliaryMethods ::convertStringToNUmber(userId);
+                occurances+=1;
+                return AuxiliaryMethods ::convertStringToNUmber(userId);
 
             }
             xml.OutOfElem();
@@ -168,7 +171,7 @@ void UserFile :: signIn()
         cout<<"Nieprawidlowy login lub haslo"<<endl;
         system("pause");
         setIdOfLoggedUser(0);
-        //return 0;
+        return 0;
     }
 }
 
@@ -176,5 +179,7 @@ void UserFile :: signIn()
 
 int UserFile :: getIdLoggedUser()
 {
+    cout<<"idOfLoggedUser from UserFile "<<idOfLoggedUser<<endl;
+    system("pause");
     return idOfLoggedUser;
 }

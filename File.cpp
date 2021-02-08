@@ -7,8 +7,9 @@ using namespace std;
 
 int File :: findIdNumberOfTheLastActivity()
 {
-    int lengthOfTitle = FILE_NAME.length()-4;
-    string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
+    //int lengthOfTitle = FILE_NAME.length()-4;
+    //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
+    string mainTitleOfFile = FILE_NAME;
     int number=0;
     if(xml.Load(FILE_NAME.c_str()))
     {
@@ -48,8 +49,12 @@ void File :: setIdNumberOfTheLastActivity(int newLastNumberActivity)
 
 void File :: addToFile()
 {
-    int lengthOfTitle = FILE_NAME.length()-4;
-    string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
+    cout<<"FILE_NAME: "<<FILE_NAME<<endl;
+    cout<<"IdNumberOfTheLastActivity: "<<idNumberOfTheLastActivity<<endl;
+    cout<<"FILE - addToFile()"<<endl;
+    //int lengthOfTitle = FILE_NAME.length()-4;
+    //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
+    string mainTitleOfFile = FILE_NAME;
     string idActivity = "", idUser="", date="", descriptionOfActivity="", money="";
     idActivity = AuxiliaryMethods::convertNumberToString(idNumberOfTheLastActivity+1);
     idUser = AuxiliaryMethods::convertNumberToString(idNumberOfUser);
@@ -93,7 +98,3 @@ void File :: addToFile()
     }
 
 }
-
-
-
-

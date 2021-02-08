@@ -24,7 +24,7 @@ public:
 
     UserMenager(string userFileName);
     void userRegister();
-    void signIn();
+    int signIn();
     int getLastUserId();
     int getIdOfLoggedUser();
 };
