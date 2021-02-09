@@ -4,6 +4,55 @@
 
 using namespace std;
 
+bool File :: chceckDateWord(vector <string> date)
+{
+  for(vector <string>:: iterator it = date.begin(); it!=date.end(); it++)
+  {
+      string iteratorWord = *it;
+      for(int i = 0; i<iteratorWord.length(); i++)
+      {
+          if(!isdigit(iteratorWord[i]))
+          {
+              return false;
+          }
+      }
+  }
+  int year = AuxiliaryMethods::convertStringToNUmber(date[0]);
+  int month = AuxiliaryMethods::convertStringToNUmber(date[1]);
+  int day = AuxiliaryMethods::convertStringToNUmber(date[2]);
+  Date currentDate(day, month, year);
+  cout<<"Czy jest przestepny: "<<currentDate.czyJestPrzestepny()<<endl;
+  cout<<"lata: "<<currentDate.lata<<endl;
+  cout<<"miesiace: "<<currentDate.miesiace<<endl;
+  cout<<"dni: "<<currentDate.dni<<endl;
+  if(currentDate.ileDniMaMiesiac())
+  {
+    return true;
+  }
+  else
+  {
+      return false;
+  }
+
+
+}
+
+vector <string> File :: createVectorFromDateWords(string date)
+{
+        vector <string> words;
+        stringstream ss(date);
+        string token;
+        while(getline(ss,token,'-'))
+        {
+            cout<<"token: "<<token<<endl;
+            words.push_back(token);
+        }
+        return words;
+}
+
+
+
+
 string File :: modifyFileName(string fileName)
 {
     int lengthOfWord = fileName.length()-4;
@@ -62,6 +111,7 @@ void File :: addToFile()
 
     //int lengthOfTitle = FILE_NAME.length()-4;
     //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
+    int vectorIndex = 0;
     string mainTitleOfFile = modifyFileName(FILE_NAME);
     string idActivity = "", idUser="", date="", descriptionOfActivity="", money="";
     idActivity = AuxiliaryMethods::convertNumberToString(idNumberOfTheLastActivity+1);
@@ -71,7 +121,23 @@ void File :: addToFile()
     {
         cout<<"Write subsequently date as yyyy-mm-dd, descritpion, amount of money: "<<endl;
         *it = AuxiliaryMethods ::getText();
+        if(vectorIndex == 0)
+        {   vector <string> word = createVectorFromDateWords(*it);
+            bool checkingDatePoint = chceckDateWord(word);
+            cout<<"checkingDatePoint "<<checkingDatePoint<<" "<<"*it: "<<*it<<endl;
+            while(checkingDatePoint==false)
+            {
+                cout<<"Date is wrong, try again"<<endl;
+                data[0] = AuxiliaryMethods::getText();
+                checkingDatePoint = chceckDateWord(createVectorFromDateWords(data[0]));
+
+            }
+        }
+        vectorIndex++;
+
     }
+
+
 
     if(xml.Load(FILE_NAME.c_str()))
     {

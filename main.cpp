@@ -46,8 +46,6 @@ int main()
         }
         else
         {
-            cout<<financialApp.getLastUserID()<<endl;
-            cout<<"now you are in else"<<endl;
             char loggedInChoice;
             loggedInChoice = menu.loggedInMenu();
             switch(loggedInChoice)
