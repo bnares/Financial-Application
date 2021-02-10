@@ -128,11 +128,11 @@
 	"Markup.h"
 	"AuxiliaryMethods.h"
 
-1612895853 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
+1612949560 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
 	"File.h"
 	<iostream>
 
-1612889118 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.h
+1612949610 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.h
 	<iostream>
 	<vector>
 	<sstream>
@@ -141,6 +141,7 @@
 	"Markup.h"
 	"AuxiliaryMethods.h"
 	"Date.h"
+	<algorithm>
 
 1612550791 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\filewithincomes.cpp
 
@@ -157,7 +158,7 @@
 
 1612893634 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\date.h
 
-1612895724 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\date.cpp
+1612950353 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\date.cpp
 	"Date.h"
 	<iostream>
 

@@ -10,6 +10,7 @@
 #include "Markup.h"
 #include "AuxiliaryMethods.h"
 #include "Date.h"
+#include <algorithm>
 
 
 using namespace std;
@@ -26,6 +27,7 @@ class File
     vector <string> createVectorFromDateWords(string date);
     string modifyFileName(string fileName);
     bool chceckDateWord(vector <string> date);
+    string changeCommaToDot(string number);
 public:
     File(string fileName, int userId)
     : FILE_NAME(fileName), idNumberOfUser(userId)

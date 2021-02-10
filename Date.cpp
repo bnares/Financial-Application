@@ -43,7 +43,7 @@ bool Date :: ileDniMaMiesiac()
         }
     }
 
-    else if(czyPrzystepny==false && (1<=miesiace<2 || 3<=miesiace<=12))
+    else if((czyPrzystepny==false || czyPrzystepny == true) && (1<=miesiace<2 || 3<=miesiace<=12))
     {
         if (miesiace == 1 || miesiace ==3 || miesiace == 5 || miesiace == 7 || miesiace ==8 || miesiace ==10 || miesiace ==12)
         {

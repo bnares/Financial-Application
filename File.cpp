@@ -4,6 +4,18 @@
 
 using namespace std;
 
+
+string File :: changeCommaToDot(string number)
+{
+    string tekst = number;
+    replace(tekst.begin(), tekst.end(), ',', '.');
+    cout<<"after modyfication with comma: "<<tekst<<endl;
+    return tekst;
+}
+
+
+
+
 bool File :: chceckDateWord(vector <string> date)
 {
   for(vector <string>:: iterator it = date.begin(); it!=date.end(); it++)
@@ -21,10 +33,6 @@ bool File :: chceckDateWord(vector <string> date)
   int month = AuxiliaryMethods::convertStringToNUmber(date[1]);
   int day = AuxiliaryMethods::convertStringToNUmber(date[2]);
   Date currentDate(day, month, year);
-  cout<<"Czy jest przestepny: "<<currentDate.czyJestPrzestepny()<<endl;
-  cout<<"lata: "<<currentDate.lata<<endl;
-  cout<<"miesiace: "<<currentDate.miesiace<<endl;
-  cout<<"dni: "<<currentDate.dni<<endl;
   if(currentDate.ileDniMaMiesiac())
   {
     return true;
@@ -122,9 +130,9 @@ void File :: addToFile()
         cout<<"Write subsequently date as yyyy-mm-dd, descritpion, amount of money: "<<endl;
         *it = AuxiliaryMethods ::getText();
         if(vectorIndex == 0)
-        {   vector <string> word = createVectorFromDateWords(*it);
+        {
+            vector <string> word = createVectorFromDateWords(*it);
             bool checkingDatePoint = chceckDateWord(word);
-            cout<<"checkingDatePoint "<<checkingDatePoint<<" "<<"*it: "<<*it<<endl;
             while(checkingDatePoint==false)
             {
                 cout<<"Date is wrong, try again"<<endl;
@@ -132,6 +140,10 @@ void File :: addToFile()
                 checkingDatePoint = chceckDateWord(createVectorFromDateWords(data[0]));
 
             }
+        }
+        if(vectorIndex==2)
+        {
+            *it = changeCommaToDot(*it);
         }
         vectorIndex++;
 
