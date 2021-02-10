@@ -27,6 +27,14 @@ bool File :: chceckDateWord(vector <string> date)
           {
               return false;
           }
+          if( it == date.begin()+1 || it == date.end()-1)
+          {
+             if(iteratorWord.length()<2)
+             {
+                 cout<<"if number in day or month position is less than 10, use prefix 0 before number for example 2020-03-08"<<endl;
+                 return false;
+             }
+          }
       }
   }
   int year = AuxiliaryMethods::convertStringToNUmber(date[0]);

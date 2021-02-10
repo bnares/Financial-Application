@@ -9,8 +9,6 @@ using namespace std;
 
 
 
-
-
 void IncomesFile :: readFromFileData(vector <Income> &incomes)
 {
 

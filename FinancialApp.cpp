@@ -46,5 +46,10 @@ int FinancialApp :: getIdOfLoggedUser()
 void FinancialApp :: AddExpense()
 {
 
-    loggedUserManager -> addToFile();
+    loggedUserManager -> addExpenseToFile();
+}
+
+void FinancialApp :: AddIncome()
+{
+   loggedUserManager ->addIncomeToFile();
 }

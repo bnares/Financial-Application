@@ -3,8 +3,17 @@
 
 using namespace std;
 
-void LoggedUserManager :: addToFile()
+void LoggedUserManager :: addExpenseToFile()
 {
 
     expensesFile.addToFile();
+
 }
+
+
+
+void LoggedUserManager :: addIncomeToFile()
+{
+    incomesFile.addToFile();
+}
+

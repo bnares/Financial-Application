@@ -52,6 +52,7 @@ int main()
             {
             case '1':
                 {
+                    financialApp.AddIncome();
                     break;
                 }
             case '2':

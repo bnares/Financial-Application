@@ -11,6 +11,7 @@
 #include "AuxiliaryMethods.h"
 #include "Date.h"
 #include <algorithm>
+#include <windows.h>
 
 
 using namespace std;

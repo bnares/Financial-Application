@@ -76,4 +76,11 @@
 <Descritpion>check comma</Descritpion>
 <Amount>145.89</Amount>
 </Wydatki>
+<Wydatki>
+<IdOfActivity>12</IdOfActivity>
+<UserId>4</UserId>
+<Date>546-08-13</Date>
+<Descritpion>test</Descritpion>
+<Amount>1876.9</Amount>
+</Wydatki>
 </Activities>

@@ -44,6 +44,7 @@ class FinancialApp
         void signIn();
         int getIdOfLoggedUser();
         void AddExpense();
+        void AddIncome();
 
 
 };
