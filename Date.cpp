@@ -127,6 +127,34 @@ int Date :: pobierzLiczbeLatPrzestepnych()
 }
 
 
+int Date :: getTodayDateAsNumber()
+{
+    SYSTEMTIME date;
+    GetLocalTime(&date);
+    int year = date.wYear;
+    int month = date.wMonth;
+    int day = date.wDay;
+
+    stringstream ssy(year);
+    stringstream ssm(month);
+    stringstream ssd(day);
+
+    string stringYear;
+    string stringMOnth;
+    string stringDay;
+
+    ssy>>stringYear;
+    ssm>>stringMOnth;
+    ssd>>stringDay;
+
+    string stringNumber = stringYear+stringMOnth+stringDay;
+    int dayNumber;
+    stringstream ss(stringNumber);
+    ss>>dayNumber;
+    return dayNumber;
+}
+
+
 
 
 

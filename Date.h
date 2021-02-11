@@ -1,5 +1,9 @@
 #ifndef DATE_H
 #define DATE_H
+//#include <time.h>
+//#include <ctime>
+#include <windows.h>
+#include <sstream>
 
 
 class Date
@@ -17,6 +21,7 @@ class Date
     Date(int wpiszDzien, int wpiszMiesiac, int wpiszLata);
     bool PobierzCzyRokJestPrzestepny();
     int pobierzLiczbeLatPrzestepnych();
+    int getTodayDateAsNumber();
 
 };
 

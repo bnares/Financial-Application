@@ -129,7 +129,7 @@
 	"Markup.h"
 	"AuxiliaryMethods.h"
 
-1612953430 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
+1612962227 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
 	"File.h"
 	<iostream>
 
@@ -161,9 +161,11 @@
 	<iostream>
 	"Markup.h"
 
-1612893634 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\date.h
+1613056398 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\date.h
+	<windows.h>
+	<sstream>
 
-1612950353 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\date.cpp
+1613056411 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\date.cpp
 	"Date.h"
 	<iostream>
 
