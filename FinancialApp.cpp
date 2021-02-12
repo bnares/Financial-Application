@@ -53,3 +53,9 @@ void FinancialApp :: AddIncome()
 {
    loggedUserManager ->addIncomeToFile();
 }
+
+
+int FinancialApp :: getFirstDate()
+{
+    return loggedUserManager -> getDate();
+}

@@ -8,6 +8,7 @@ using namespace std;
 
 class Result
 {
+    protected:
     int idUser;
     int date;
     string desciptonOfActivity;

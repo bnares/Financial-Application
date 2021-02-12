@@ -83,4 +83,18 @@
 <Descritpion>test</Descritpion>
 <Amount>1876.9</Amount>
 </Wydatki>
+<Wydatki>
+<IdOfActivity>13</IdOfActivity>
+<UserId>1</UserId>
+<Date>2021-02-11</Date>
+<Descritpion>date checking</Descritpion>
+<Amount>156.89</Amount>
+</Wydatki>
+<Wydatki>
+<IdOfActivity>14</IdOfActivity>
+<UserId>2</UserId>
+<Date>2123-04-23</Date>
+<Descritpion>wht</Descritpion>
+<Amount>123.45</Amount>
+</Wydatki>
 </Activities>

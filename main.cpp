@@ -61,6 +61,14 @@ int main()
                     financialApp.AddExpense();
                     break;
                 }
+            case '3':
+                {
+                    cout<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
+                    int number = financialApp.getFirstDate();
+                    cout<<"Data: "<<number<<endl;
+                    system("pause");
+                    break;
+                }
             }
         }
 

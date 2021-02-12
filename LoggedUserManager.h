@@ -31,7 +31,12 @@ public:
 
     void addExpenseToFile();
     void addIncomeToFile();
+    int getDate();
 };
+
+
+
+
 
 
 

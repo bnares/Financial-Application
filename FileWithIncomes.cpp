@@ -14,6 +14,11 @@ void IncomesFile :: readFromFileData(vector <Income> &incomes)
 
 
     string mainTitleOfFile = modifyFileName(FILE_NAME);
+
+    if(xml.Load(FILE_NAME.c_str()))
+
+    {
+
     xml.FindElem();
     xml.IntoElem();
     while(xml.FindElem(mainTitleOfFile))
@@ -50,6 +55,8 @@ void IncomesFile :: readFromFileData(vector <Income> &incomes)
         {
             xml.OutOfElem();
         }
+
+    }
 
     }
 

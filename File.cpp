@@ -60,10 +60,20 @@ vector <string> File :: createVectorFromDateWords(string date)
         string token;
         while(getline(ss,token,'-'))
         {
-            cout<<"token: "<<token<<endl;
             words.push_back(token);
         }
         return words;
+}
+
+
+string File :: createStringNumberFromStringVector(vector <string> data)
+{
+    string stringNumber = "";
+    for(int i =0; i<data.size(); i++)
+    {
+        stringNumber += data.at(i);
+    }
+    return stringNumber;
 }
 
 

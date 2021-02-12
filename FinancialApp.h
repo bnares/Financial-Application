@@ -45,6 +45,7 @@ class FinancialApp
         int getIdOfLoggedUser();
         void AddExpense();
         void AddIncome();
+        int getFirstDate();
 
 
 };

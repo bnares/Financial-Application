@@ -31,8 +31,11 @@ public:
     };
 
     vector <Expense> getExpenses();
+    int expenseSize();
+
 
 };
+
 
 
 

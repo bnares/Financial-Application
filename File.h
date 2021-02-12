@@ -29,6 +29,7 @@ class File
     string modifyFileName(string fileName);
     bool chceckDateWord(vector <string> date);
     string changeCommaToDot(string number);
+    string createStringNumberFromStringVector(vector <string> data);
 public:
     File(string fileName, int userId)
     : FILE_NAME(fileName), idNumberOfUser(userId)

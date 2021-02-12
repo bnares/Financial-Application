@@ -135,19 +135,27 @@ int Date :: getTodayDateAsNumber()
     int month = date.wMonth;
     int day = date.wDay;
 
-    stringstream ssy(year);
-    stringstream ssm(month);
-    stringstream ssd(day);
+    stringstream ssy;
+    ssy<<year;
+    stringstream ssm;
+    ssm<<month;
+    stringstream ssd;
+    ssd<<day;
 
     string stringYear;
-    string stringMOnth;
-    string stringDay;
-
     ssy>>stringYear;
-    ssm>>stringMOnth;
+    string stringMonth;
+    ssm>>stringMonth;
+    string stringDay;
     ssd>>stringDay;
 
-    string stringNumber = stringYear+stringMOnth+stringDay;
+
+    ssy>>stringYear;
+    ssm>>stringMonth;
+    ssd>>stringDay;
+
+    string stringNumber = stringYear+stringMonth+stringDay;
+
     int dayNumber;
     stringstream ss(stringNumber);
     ss>>dayNumber;
