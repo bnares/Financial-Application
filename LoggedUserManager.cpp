@@ -52,3 +52,11 @@ void LoggedUserManager :: printSortedExpenses()
     }
 }
 
+void LoggedUserManager :: printSortedIncomes()
+{
+    for(int i =0; i<incomes.size(); i++)
+    {
+        cout<<incomes[i].getDate()<<endl;
+    }
+}
+

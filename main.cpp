@@ -70,6 +70,8 @@ int main()
                     cout<<"NOW DATE IN ORDER"<<endl;
                     financialApp.printExpensesDate();
                     system("pause");
+                    financialApp.printIncomesDate();
+                    system("pause");
                     break;
                 }
             }

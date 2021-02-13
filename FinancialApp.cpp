@@ -65,3 +65,8 @@ void FinancialApp :: printExpensesDate()
 {
     loggedUserManager -> printSortedExpenses();
 }
+
+void FinancialApp :: printIncomesDate()
+{
+    loggedUserManager -> printSortedIncomes();
+}
