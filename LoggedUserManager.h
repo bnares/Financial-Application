@@ -25,14 +25,22 @@ public:
     : ID_NUMBER_LOGGED_USER(idLoggedUser), EXPENSESS_FILE_NAME(expensessFileName), INCOME_FILE_NAME(incomeFileName), expensesFile(expensessFileName, idLoggedUser), incomesFile(incomeFileName, idLoggedUser)
     {
         expenses = expensesFile.getExpenses();
+        expenses = sortExpenseByDate();
         incomes = incomesFile.getIncomes();
+        incomes = sortIncomesByDate();
 
     };
 
     void addExpenseToFile();
     void addIncomeToFile();
     int getDate();
+    vector <Expense> sortExpenseByDate();
+    vector <Income> sortIncomesByDate();
+    //testowe
+    void printSortedExpenses();
 };
+
+
 
 
 

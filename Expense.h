@@ -18,6 +18,7 @@ class Expense : public Result
 public:
     int getExpenseId();
     void setExpenseId(int newExpenseId);
+
 };
 
 

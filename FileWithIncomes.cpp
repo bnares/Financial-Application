@@ -37,7 +37,9 @@ void IncomesFile :: readFromFileData(vector <Income> &incomes)
 
             xml.FindElem("Date");
             string findDate = xml.GetData();
-            int numberDate = AuxiliaryMethods::convertStringToNUmber(findDate);
+            vector <string> dateVector = createVectorFromDateWords(findDate);
+            string stringNumber = createStringNumberFromStringVector(dateVector);
+            int numberDate = AuxiliaryMethods::convertStringToNUmber(stringNumber);
             xml.FindElem("Descritpion");
             string description = xml.GetData();
             xml.FindElem("Amount");

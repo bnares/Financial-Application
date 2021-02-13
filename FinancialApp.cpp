@@ -59,3 +59,9 @@ int FinancialApp :: getFirstDate()
 {
     return loggedUserManager -> getDate();
 }
+
+
+void FinancialApp :: printExpensesDate()
+{
+    loggedUserManager -> printSortedExpenses();
+}

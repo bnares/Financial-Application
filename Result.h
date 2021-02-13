@@ -23,6 +23,10 @@ public:
     void setDate(int newDate);
     void setDescription(string newDescription);
     void setAmountOfMoney(int money);
+    bool operator < (Result &a)
+    {
+        return this ->getDate()>a.getDate();
+    };
 };
 
 

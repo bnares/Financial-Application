@@ -67,6 +67,9 @@ int main()
                     int number = financialApp.getFirstDate();
                     cout<<"Data: "<<number<<endl;
                     system("pause");
+                    cout<<"NOW DATE IN ORDER"<<endl;
+                    financialApp.printExpensesDate();
+                    system("pause");
                     break;
                 }
             }
