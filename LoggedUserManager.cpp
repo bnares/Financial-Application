@@ -111,7 +111,7 @@ void LoggedUserManager :: printCurrentMonthResult()
     cout<<"EXPENSES:"<<endl;
     for(int i =0; i<expenses.size(); i++)
     {
-        if(lowerBoundryDateNumber<= incomes[i].getDate()<= dateNumber)
+        if(lowerBoundryDateNumber <= incomes[i].getDate() && incomes[i].getDate() <= dateNumber)
         {
            cout<<"Expense: -"<<expenses[i].getAmountOfMoney()<<" Description: "<<expenses[i].getDescription()<<endl;
            sumExpenses+=expenses[i].getAmountOfMoney();
