@@ -7,6 +7,7 @@
 #include "FileWithExpenses.h"
 #include "FileWithIncomes.h"
 #include <vector>
+#include <windows.h>
 
 using namespace std;
 
@@ -36,6 +37,7 @@ public:
     int getDate();
     vector <Expense> sortExpenseByDate();
     vector <Income> sortIncomesByDate();
+    void printCurrentMonthResult();
     //testowe
     void printSortedExpenses();
     void printSortedIncomes();

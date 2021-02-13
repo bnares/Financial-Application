@@ -46,6 +46,7 @@ class FinancialApp
         void AddExpense();
         void AddIncome();
         int getFirstDate();
+        void printMonthlyResult();
         //testowe
         void printExpensesDate();
         void printIncomesDate();

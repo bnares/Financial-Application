@@ -63,6 +63,8 @@ int main()
                 }
             case '3':
                 {
+                    financialApp.printMonthlyResult();
+                    /*
                     cout<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
                     int number = financialApp.getFirstDate();
                     cout<<"Data: "<<number<<endl;
@@ -71,6 +73,8 @@ int main()
                     financialApp.printExpensesDate();
                     system("pause");
                     financialApp.printIncomesDate();
+                    system("pause");
+                    */
                     system("pause");
                     break;
                 }

@@ -12,7 +12,7 @@ class Result
     int idUser;
     int date;
     string desciptonOfActivity;
-    int amountOfMoney;
+    float amountOfMoney;
 public:
     int getIdUser();
     int getDate();
@@ -25,7 +25,7 @@ public:
     void setAmountOfMoney(int money);
     bool operator < (Result &a)
     {
-        return this ->getDate()>a.getDate();
+        return this ->getDate()<a.getDate();
     };
 };
 

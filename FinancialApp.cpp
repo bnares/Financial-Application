@@ -70,3 +70,8 @@ void FinancialApp :: printIncomesDate()
 {
     loggedUserManager -> printSortedIncomes();
 }
+
+void FinancialApp :: printMonthlyResult()
+{
+    loggedUserManager ->printCurrentMonthResult();
+}
