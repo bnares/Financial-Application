@@ -65,8 +65,6 @@ void LoggedUserManager :: printCurrentMonthResult()
 {
     Date currentDate;
     int dateNumber = currentDate.getTodayDateAsNumber();
-    cout<<"Today is: "<<dateNumber<<endl;
-    system("pause");
     string dateString = AuxiliaryMethods::convertNumberToString(dateNumber);
     string lastTwoNumbersFromCurrentDate= "";
     int currentDateStringLength = dateString.length();
@@ -84,8 +82,6 @@ void LoggedUserManager :: printCurrentMonthResult()
             break;
         }
     }
-    cout<<"lastTwoNumbersFromDate: "<<lastTwoNumbersFromCurrentDate<<endl;
-    system("pause");
     int getLastTwoDatesNumbers = AuxiliaryMethods::convertStringToNUmber(lastTwoNumbersFromCurrentDate);
     int lowerBoundryDateNumber = dateNumber - getLastTwoDatesNumbers+1;
     int sumExpenses =0;
@@ -111,7 +107,7 @@ void LoggedUserManager :: printCurrentMonthResult()
     cout<<"EXPENSES:"<<endl;
     for(int i =0; i<expenses.size(); i++)
     {
-        if(lowerBoundryDateNumber <= incomes[i].getDate() && incomes[i].getDate() <= dateNumber)
+        if(lowerBoundryDateNumber <= expenses[i].getDate() && expenses[i].getDate() <= dateNumber)
         {
            cout<<"Expense: -"<<expenses[i].getAmountOfMoney()<<" Description: "<<expenses[i].getDescription()<<endl;
            sumExpenses+=expenses[i].getAmountOfMoney();

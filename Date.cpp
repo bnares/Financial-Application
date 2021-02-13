@@ -154,6 +154,14 @@ int Date :: getTodayDateAsNumber()
     ssm>>stringMonth;
     ssd>>stringDay;
 
+    if(month<=9)
+    {
+        stringMonth = "0"+stringMonth;
+    }
+    if(day<=9)
+    {
+        stringDay = "0"+stringDay;
+    }
     string stringNumber = stringYear+stringMonth+stringDay;
 
     int dayNumber;
