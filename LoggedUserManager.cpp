@@ -7,6 +7,9 @@ void LoggedUserManager :: addExpenseToFile()
 {
 
     expensesFile.addToFile();
+    expenses.clear();
+    expensesFile.readFromFileData(expenses);
+    expenses = sortExpenseByDate();
 
 }
 
@@ -15,6 +18,9 @@ void LoggedUserManager :: addExpenseToFile()
 void LoggedUserManager :: addIncomeToFile()
 {
     incomesFile.addToFile();
+    incomes.clear();
+    incomesFile.readFromFileData(incomes);
+    incomes = sortIncomesByDate();
 }
 
 
