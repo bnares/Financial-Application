@@ -38,6 +38,8 @@ public:
     vector <Expense> sortExpenseByDate();
     vector <Income> sortIncomesByDate();
     void printCurrentMonthResult();
+    void printPreviousMonthResult();
+
     //testowe
     void printSortedExpenses();
     void printSortedIncomes();

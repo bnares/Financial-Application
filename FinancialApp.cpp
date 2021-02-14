@@ -75,3 +75,10 @@ void FinancialApp :: printMonthlyResult()
 {
     loggedUserManager ->printCurrentMonthResult();
 }
+
+
+
+void FinancialApp :: printLastMonthResult()
+{
+    loggedUserManager ->printPreviousMonthResult();
+}

@@ -174,5 +174,50 @@ int Date :: getTodayDateAsNumber()
 
 
 
+void Date :: setDays(int days)
+{
+    dni = days;
+}
+
+void Date :: setYear(int yearNumber)
+{
+    lata = yearNumber;
+}
+
+void Date :: setMonth(int month)
+{
+    miesiace = month;
+}
+
+
+
+
+int Date :: countingDaysInSpecificMonth()
+{
+    if(miesiace == 1 || miesiace == 3 || miesiace == 5 || miesiace==7 || miesiace==8 || miesiace == 10 || miesiace ==12)
+    {
+        return 31;
+    }
+
+    if(miesiace ==4 || miesiace == 6 || miesiace == 9 || miesiace ==11)
+    {
+        return 30;
+    }
+
+    if(czyPrzystepny == true && miesiace ==2)
+    {
+        return 29;
+    }
+
+    if(czyPrzystepny = false && miesiace ==2)
+    {
+        return 28;
+    }
+}
+
+
+
+
+
 
 

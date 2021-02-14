@@ -137,3 +137,146 @@ void LoggedUserManager :: printCurrentMonthResult()
 
 }
 
+
+
+
+
+
+
+void LoggedUserManager :: printPreviousMonthResult()
+{
+    Date today;
+    int lowerBoundryDateNumber;
+    int upperBoundryDateNumber;
+    int todayDateAsNumber = today.getTodayDateAsNumber();
+    string todayDateAsString = AuxiliaryMethods::convertNumberToString(todayDateAsNumber);
+    int lengthOfStringDate = todayDateAsString.length();
+    //string todayYearAsString = todayDateAsNumber.erase(4,lengthOfStringDate-4);
+    string yerarString="";
+    string monthString="";
+    string dayString="";
+
+    for(int i =0; i<lengthOfStringDate; i++)
+    {
+        if(i<4)
+        {
+            yerarString+=todayDateAsString[i];
+        }
+        if(i>=4 && i<lengthOfStringDate-2)
+        {
+            monthString+=todayDateAsString[i];
+        }
+        if(i>=lengthOfStringDate-2 && i<lengthOfStringDate)
+        {
+            dayString+=todayDateAsString[i];
+        }
+    }
+    int yearNumber = AuxiliaryMethods::convertStringToNUmber(yerarString);
+    int monthNumber = AuxiliaryMethods::convertStringToNUmber(monthString)-1;
+    //int daysNumber = AuxiliaryMethods::convertStringToNUmber(dayString);
+    int daysNumber;
+
+    if(monthNumber==2)
+    {
+        if(yearNumber%400 ==0 || (yearNumber %4==0 && yearNumber %100 !=0))
+        {
+            daysNumber = 29;
+        }
+        else
+        {
+            daysNumber = 28;
+        }
+    }
+
+    if(monthNumber == 1 || monthNumber == 3 || monthNumber == 5 || monthNumber==7 || monthNumber==8 || monthNumber == 10 || monthNumber ==12)
+    {
+        daysNumber =31;
+    }
+    else
+    {
+        daysNumber = 30;
+    }
+
+    if(monthNumber ==0)
+    {
+        monthNumber =12;
+        daysNumber =31;
+        yearNumber = yearNumber-1;
+    }
+
+
+    if(monthNumber<10)
+    {
+        monthString = "0"+AuxiliaryMethods::convertNumberToString(monthNumber);
+    }
+    else
+    {
+        monthString = AuxiliaryMethods::convertNumberToString(monthNumber);
+    }
+
+    if(daysNumber<10)
+    {
+        dayString = "0"+AuxiliaryMethods::convertNumberToString(daysNumber);
+    }
+    else
+    {
+        dayString = AuxiliaryMethods::convertNumberToString(daysNumber);
+    }
+
+    yerarString = AuxiliaryMethods::convertNumberToString(yearNumber);
+
+    upperBoundryDateNumber = AuxiliaryMethods::convertStringToNUmber(yerarString+monthString+dayString);
+    lowerBoundryDateNumber = AuxiliaryMethods::convertStringToNUmber(yerarString+monthString+"01");
+
+    int sumExpenses =0;
+    int sumIncomes = 0;
+    int occurrences = 0;
+    cout<<"INCOMES"<<endl;
+    for(int i =0; i<incomes.size(); i++)
+    {
+        if(incomes[i].getDate()>=lowerBoundryDateNumber && incomes[i].getDate()<=upperBoundryDateNumber)
+        {
+            cout<<"Incom: +"<<incomes.at(i).getAmountOfMoney()<<" Description: "<<incomes.at(i).getDescription()<<endl;
+
+            sumIncomes+=incomes.at(i).getAmountOfMoney();
+            occurrences++;
+        }
+    }
+    if(occurrences==0)
+    {
+        cout<<"No income in last month"<<endl;
+    }
+    occurrences=0;
+    cout<<"EXPENSES"<<endl;
+    for(int i =0; i<expenses.size(); i++)
+    {
+        if(expenses[i].getDate()>=lowerBoundryDateNumber && expenses[i].getDate()<=upperBoundryDateNumber)
+        {
+            cout<<"Expens: -"<<expenses.at(i).getAmountOfMoney()<<" Description: "<<expenses.at(i).getDescription()<<endl;
+
+            sumExpenses+=expenses.at(i).getAmountOfMoney();
+            occurrences++;
+        }
+    }
+    if(occurrences==0)
+    {
+        cout<<"No expenses in last month"<<endl;
+    }
+
+    cout<<endl;
+    float result = sumIncomes - sumExpenses;
+    if(result>=0)
+    {
+        cout<<"so far You have earned: "<<result<<endl;
+    }
+    else
+    {
+        cout<<"so far You have lost: "<<result<<endl;
+    }
+
+
+
+
+
+}
+

@@ -22,6 +22,10 @@ class Date
     bool PobierzCzyRokJestPrzestepny();
     int pobierzLiczbeLatPrzestepnych();
     int getTodayDateAsNumber();
+    void setDays(int days);
+    void setYear(int yearNumber);
+    void setMonth(int month);
+    int countingDaysInSpecificMonth();
 
 };
 

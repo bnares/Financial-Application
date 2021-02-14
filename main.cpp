@@ -64,17 +64,13 @@ int main()
             case '3':
                 {
                     financialApp.printMonthlyResult();
-                    /*
-                    cout<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
-                    int number = financialApp.getFirstDate();
-                    cout<<"Data: "<<number<<endl;
+
                     system("pause");
-                    cout<<"NOW DATE IN ORDER"<<endl;
-                    financialApp.printExpensesDate();
-                    system("pause");
-                    financialApp.printIncomesDate();
-                    system("pause");
-                    */
+                    break;
+                }
+            case'4':
+                {
+                    financialApp.printLastMonthResult();
                     system("pause");
                     break;
                 }
