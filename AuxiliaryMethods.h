@@ -14,6 +14,7 @@ class AuxiliaryMethods
         static int convertStringToNUmber(string textToConvert);
         static string convertNumberToString(int numberToConvert);
         static string getText();
+        static int getNumber();
 };
 
 

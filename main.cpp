@@ -74,6 +74,12 @@ int main()
                     system("pause");
                     break;
                 }
+            case '5':
+                {
+                    financialApp.printResultOfSelectedPeriodOfTime();
+                    system("pause");
+                    break;
+                }
             }
         }
 

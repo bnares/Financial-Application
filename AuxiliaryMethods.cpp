@@ -60,3 +60,15 @@ string AuxiliaryMethods :: getText()
     getline(cin, text);
     return text;
 }
+
+
+int AuxiliaryMethods :: getNumber()
+{
+    //string text;
+    int number;
+    cin.clear();
+    cin.sync();
+    cin>>number;
+    //number = convertStringToNUmber(text);
+    return number;
+}

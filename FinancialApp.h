@@ -48,6 +48,7 @@ class FinancialApp
         int getFirstDate();
         void printMonthlyResult();
         void printLastMonthResult();
+        void printResultOfSelectedPeriodOfTime();
         //testowe
         void printExpensesDate();
         void printIncomesDate();

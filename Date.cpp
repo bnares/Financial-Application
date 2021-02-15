@@ -21,7 +21,7 @@ bool Date :: ileDniMaMiesiac()
     if (miesiace ==2 && czyPrzystepny ==true)
     {
 
-        if (dni <= 29)
+        if (dni <= 29 && dni>=1)
         {
             return true;
         }
@@ -33,7 +33,7 @@ bool Date :: ileDniMaMiesiac()
     if(miesiace == 2 && czyPrzystepny == false)
     {
 
-        if(dni <= 28)
+        if(dni <= 28 && dni>=1)
         {
             return true;
         }
@@ -47,7 +47,7 @@ bool Date :: ileDniMaMiesiac()
     {
         if (miesiace == 1 || miesiace ==3 || miesiace == 5 || miesiace == 7 || miesiace ==8 || miesiace ==10 || miesiace ==12)
         {
-            if(dni <= 31)
+            if(dni <= 31 && dni>=1)
             {
                 return true;
             }
@@ -59,7 +59,7 @@ bool Date :: ileDniMaMiesiac()
         }
         if(miesiace==4 || miesiace ==6 || miesiace == 9 || miesiace ==11)
         {
-            if(dni <= 30)
+            if(dni <= 30 && dni>=1)
             {
                 return true;
             }
@@ -71,7 +71,7 @@ bool Date :: ileDniMaMiesiac()
 
         }
     }
-    if(miesiace>12 || dni >31)
+    if(miesiace>12 || dni >31 || dni<=0 || miesiace<=0)
     {
         return false;
     }
@@ -125,6 +125,45 @@ int Date :: pobierzLiczbeLatPrzestepnych()
 {
     return liczbaLatPrzestepnych;
 }
+
+
+
+int Date :: getDateAsNumber()
+{
+    stringstream ssy;
+    ssy<<lata;
+    stringstream ssm;
+    ssm<<miesiace;
+    stringstream ssd;
+    ssd<<dni;
+
+    string stringYear;
+    ssy>>stringYear;
+    string stringMonth;
+    ssm>>stringMonth;
+    string stringDay;
+    ssd>>stringDay;
+
+    if(miesiace<=9)
+    {
+        stringMonth = "0"+stringMonth;
+    }
+    if(dni<=9)
+    {
+        stringDay = "0"+stringDay;
+    }
+    string stringNumber = stringYear+stringMonth+stringDay;
+
+    int dayNumber;
+    stringstream ss(stringNumber);
+    ss>>dayNumber;
+    return dayNumber;
+
+
+
+
+}
+
 
 
 int Date :: getTodayDateAsNumber()

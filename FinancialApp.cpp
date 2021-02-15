@@ -82,3 +82,9 @@ void FinancialApp :: printLastMonthResult()
 {
     loggedUserManager ->printPreviousMonthResult();
 }
+
+
+void FinancialApp :: printResultOfSelectedPeriodOfTime()
+{
+    loggedUserManager ->selectPeriodOfTime();
+}

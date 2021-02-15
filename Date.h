@@ -26,6 +26,7 @@ class Date
     void setYear(int yearNumber);
     void setMonth(int month);
     int countingDaysInSpecificMonth();
+    int getDateAsNumber();
 
 };
 

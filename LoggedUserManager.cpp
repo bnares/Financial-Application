@@ -98,7 +98,7 @@ void LoggedUserManager :: printCurrentMonthResult()
     {
         if(lowerBoundryDateNumber <= incomes[i].getDate() && incomes[i].getDate() <= dateNumber)
         {
-            cout<<"Incom: +"<<incomes[i].getAmountOfMoney()<<" Description: "<<incomes[i].getDescription()<<endl;
+            cout<<"Incom: +"<<incomes[i].getAmountOfMoney()<<" Description: "<<incomes[i].getDescription()<<" Date: "<<incomes[i].getDate()<<endl;
             sumIncomes+=incomes[i].getAmountOfMoney();
             occurrences++;
         }
@@ -115,7 +115,7 @@ void LoggedUserManager :: printCurrentMonthResult()
     {
         if(lowerBoundryDateNumber <= expenses[i].getDate() && expenses[i].getDate() <= dateNumber)
         {
-           cout<<"Expense: -"<<expenses[i].getAmountOfMoney()<<" Description: "<<expenses[i].getDescription()<<endl;
+           cout<<"Expense: -"<<expenses[i].getAmountOfMoney()<<" Description: "<<expenses[i].getDescription()<<" Date: "<<expenses[i].getDate()<<endl;
            sumExpenses+=expenses[i].getAmountOfMoney();
            occurrences++;
         }
@@ -236,7 +236,7 @@ void LoggedUserManager :: printPreviousMonthResult()
     {
         if(incomes[i].getDate()>=lowerBoundryDateNumber && incomes[i].getDate()<=upperBoundryDateNumber)
         {
-            cout<<"Incom: +"<<incomes.at(i).getAmountOfMoney()<<" Description: "<<incomes.at(i).getDescription()<<endl;
+            cout<<"Incom: +"<<incomes.at(i).getAmountOfMoney()<<" Description: "<<incomes.at(i).getDescription()<<" Date: "<<incomes.at(i).getDate()<<endl;
 
             sumIncomes+=incomes.at(i).getAmountOfMoney();
             occurrences++;
@@ -252,7 +252,7 @@ void LoggedUserManager :: printPreviousMonthResult()
     {
         if(expenses[i].getDate()>=lowerBoundryDateNumber && expenses[i].getDate()<=upperBoundryDateNumber)
         {
-            cout<<"Expens: -"<<expenses.at(i).getAmountOfMoney()<<" Description: "<<expenses.at(i).getDescription()<<endl;
+            cout<<"Expens: -"<<expenses.at(i).getAmountOfMoney()<<" Description: "<<expenses.at(i).getDescription()<<" Date"<<expenses.at(i).getDate()<<endl;
 
             sumExpenses+=expenses.at(i).getAmountOfMoney();
             occurrences++;
@@ -275,8 +275,115 @@ void LoggedUserManager :: printPreviousMonthResult()
     }
 
 
+}
+
+
+
+void LoggedUserManager :: selectPeriodOfTime()
+{
+   int year;
+   int month;
+   int day;
+   vector<int> data = {year, month, day};
+   cout<<"Select first date"<<endl;
+   for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
+   {
+        cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+       *it = AuxiliaryMethods::getNumber();
+   }
+
+   Date lowerDate(data[2], data[1], data[0]);
+   bool firstDateCond = lowerDate.ileDniMaMiesiac();
+   if(firstDateCond==false)
+   {
+       cout<<"wrong date"<<endl;
+       for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
+        {
+            cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+            *it = AuxiliaryMethods::getNumber();
+        }
+        Date lowerDate(data[2], data[1], data[0]);
+        firstDateCond = lowerDate.ileDniMaMiesiac();
+   }
+   cout<<"Select second date"<<endl;
+   for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
+   {
+        cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+       *it = AuxiliaryMethods::getNumber();
+   }
+
+   Date upperDate(data[2], data[1], data[0]);
+   bool secondDateCond = upperDate.ileDniMaMiesiac();
+   if(secondDateCond==false)
+   {
+       cout<<"Wrong date"<<endl;
+       for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
+        {
+            cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+            *it = AuxiliaryMethods::getNumber();
+        }
+        Date upperDate(data[2], data[1], data[0]);
+        secondDateCond = upperDate.ileDniMaMiesiac();
+   }
+
+   int firstDateNumber = lowerDate.getDateAsNumber();
+   int secondDateNumber = upperDate.getDateAsNumber();
+
+   int sumExpenses =0;
+   int sumIncomes = 0;
+   int occurrences = 0;
+
+
+   cout<<"INCOMES:"<<endl;
+   for(int i =0; i<incomes.size(); i++)
+   {
+       if(incomes.at(i).getDate()>= firstDateNumber && incomes.at(i).getDate()<=secondDateNumber)
+       {
+           cout<<"Incom: +"<<incomes.at(i).getAmountOfMoney()<<" Description: "<<incomes.at(i).getDescription()<<" Date: "<<incomes.at(i).getDate()<<endl;
+
+            sumIncomes+=incomes.at(i).getAmountOfMoney();
+            occurrences++;
+       }
+   }
+
+   if(occurrences==0)
+   {
+       cout<<"No income in this period of time"<<endl;
+   }
+   occurrences =0;
+
+   cout<<"EXPENSES"<<endl;
+    for(int i =0; i<expenses.size(); i++)
+    {
+        if(expenses[i].getDate()>=firstDateNumber && expenses[i].getDate()<=secondDateNumber)
+        {
+            cout<<"Expens: -"<<expenses.at(i).getAmountOfMoney()<<" Description: "<<expenses.at(i).getDescription()<<" Date: "<<expenses.at(i).getDate()<<endl;
+
+            sumExpenses+=expenses.at(i).getAmountOfMoney();
+            occurrences++;
+        }
+    }
+    if(occurrences==0)
+    {
+        cout<<"No expenses in selected period of time"<<endl;
+    }
+
+    cout<<endl;
+    float result = sumIncomes - sumExpenses;
+    if(result>=0)
+    {
+        cout<<"so far You have earned: "<<result<<endl;
+    }
+    else
+    {
+        cout<<"so far You have lost: "<<result<<endl;
+    }
 
 
 
 }
+
+
+
+
 
