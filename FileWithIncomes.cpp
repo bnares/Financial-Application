@@ -44,7 +44,7 @@ void IncomesFile :: readFromFileData(vector <Income> &incomes)
             string description = xml.GetData();
             xml.FindElem("Amount");
             string cash = xml.GetData();
-            int money = AuxiliaryMethods::convertStringToNUmber(cash);
+            float money = AuxiliaryMethods::convertStringToFloatNumber(cash);
             income.setIncomeId(activityIdNumber);
             income.setIdUser(userId);
             income.setDate(numberDate);

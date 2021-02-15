@@ -69,7 +69,7 @@ void  UserFile :: addUserToFile()
         cout<<"write sequentially login, password, name and surname, press enter each time ";
         getline(cin, text);
         *itr = text;
-        cout<<"itr :"<<*itr<<endl;
+        //cout<<"itr :"<<*itr<<endl;
         cout<<endl;
     }
 

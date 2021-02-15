@@ -83,15 +83,15 @@ void LoggedUserManager :: printCurrentMonthResult()
         }
         else
         {
-            cout<<"sth went wrong sorry with the dates, sorry..."<<endl;
+            cout<<"sth went wrong sorry with the date, sorry..."<<endl;
             Sleep(1000);
             break;
         }
     }
     int getLastTwoDatesNumbers = AuxiliaryMethods::convertStringToNUmber(lastTwoNumbersFromCurrentDate);
     int lowerBoundryDateNumber = dateNumber - getLastTwoDatesNumbers+1;
-    int sumExpenses =0;
-    int sumIncomes = 0;
+    float sumExpenses =0.0;
+    float sumIncomes = 0.0;
     int occurrences = 0;
     cout<<"INCOMES:"<<endl;
     for(int i =0; i< incomes.size(); i++)
@@ -228,8 +228,8 @@ void LoggedUserManager :: printPreviousMonthResult()
     upperBoundryDateNumber = AuxiliaryMethods::convertStringToNUmber(yerarString+monthString+dayString);
     lowerBoundryDateNumber = AuxiliaryMethods::convertStringToNUmber(yerarString+monthString+"01");
 
-    int sumExpenses =0;
-    int sumIncomes = 0;
+    float sumExpenses =0;
+    float sumIncomes = 0;
     int occurrences = 0;
     cout<<"INCOMES"<<endl;
     for(int i =0; i<incomes.size(); i++)
@@ -329,8 +329,8 @@ void LoggedUserManager :: selectPeriodOfTime()
    int firstDateNumber = lowerDate.getDateAsNumber();
    int secondDateNumber = upperDate.getDateAsNumber();
 
-   int sumExpenses =0;
-   int sumIncomes = 0;
+   float sumExpenses =0;
+   float sumIncomes = 0;
    int occurrences = 0;
 
 

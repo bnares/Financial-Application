@@ -16,13 +16,13 @@ class Result
 public:
     int getIdUser();
     int getDate();
-    int getAmountOfMoney();
+    float getAmountOfMoney();
     string getDescription();
 
     void setIdUser(int newId);
     void setDate(int newDate);
     void setDescription(string newDescription);
-    void setAmountOfMoney(int money);
+    void setAmountOfMoney(float money);
     bool operator < (Result &a)
     {
         return this ->getDate()<a.getDate();

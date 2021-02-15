@@ -30,13 +30,27 @@ char AuxiliaryMethods::getChar()
 
 
 
+float AuxiliaryMethods :: convertStringToFloatNumber(string stringFloat)
+{
+    stringstream ss;
+    float numberFloat = 0.0;
+    ss<<stringFloat;
+    ss>>numberFloat;
+    return numberFloat;
+}
+
+
+
 int AuxiliaryMethods :: convertStringToNUmber(string textToConvert)
 {
     stringstream ss;
     int number;
+    //cout<<"Pobiersza: "<<textToConvert<<endl;
 
     ss <<textToConvert;
     ss>>number;
+    //cout<<"Oddajesz: "<<number<<endl;
+    //system("pause");
     return number;
 }
 

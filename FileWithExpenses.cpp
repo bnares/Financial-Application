@@ -48,7 +48,10 @@ void ExpensesFile :: readFromFileData(vector <Expense> &expenses)
             string description = xml.GetData();
             xml.FindElem("Amount");
             string cash = xml.GetData();
-            int money = AuxiliaryMethods::convertStringToNUmber(cash);
+            cout<<"Pobrana wartosc z FileWithExpenses: "<<cash<<endl;
+            float money = AuxiliaryMethods::convertStringToFloatNumber(cash);   //tutajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+            cout<<"Przeksztalcona wartosc: "<<money<<endl;
+            system("pause");
             expense.setExpenseId(activityIdNumber);
             expense.setIdUser(userId);
             expense.setDate(numberDate);

@@ -20,7 +20,7 @@ int Result :: getDate()
     return date;
 }
 
-int Result :: getAmountOfMoney()
+float Result :: getAmountOfMoney()
 {
     return amountOfMoney;
 }
@@ -47,7 +47,7 @@ void Result :: setDescription(string newDescription)
 }
 
 
-void Result :: setAmountOfMoney(int money)
+void Result :: setAmountOfMoney(float money)
 {
     amountOfMoney = money;
 }
