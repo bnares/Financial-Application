@@ -87,6 +87,12 @@ int main()
                     cout<<"po"<<endl;
                     break;
                 }
+            case '7':
+                {
+                    controlValue =0;
+                    cout<<"Wylogowywanie..."<<endl;
+                    Sleep(1000);
+                }
             }
         }
 

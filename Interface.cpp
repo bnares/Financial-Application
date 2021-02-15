@@ -10,10 +10,10 @@ char Menu::openingMenu()
     system("cls");
     cout<<"MENU GLOWNE"<<endl;
     cout<<"-----------"<<endl;
-    cout<<"1-Rejestracja"<<endl;
-    cout<<"2-Logowanie"<<endl;
-    cout<<"3-Zakoncz"<<endl;
-    cout<<"Twoj wybor: ";
+    cout<<"1-Register"<<endl;
+    cout<<"2-Sign in"<<endl;
+    cout<<"3-Exit"<<endl;
+    cout<<"User choice: ";
 
     choice = AuxiliaryMethods::getChar();
 
@@ -28,7 +28,7 @@ char Menu :: loggedInMenu()
 {
     char choice;
     system("cls");
-    cout<<"MENU UZYTKOWNIKA"<<endl;
+    cout<<"   USER MENU    "<<endl;
     cout<<"----------------"<<endl;
     cout<<"1-Add income"<<endl;
     cout<<"2-Add expense"<<endl;
@@ -36,6 +36,7 @@ char Menu :: loggedInMenu()
     cout<<"4-Last month result"<<endl;
     cout<<"5-Selected period result"<<endl;
     cout<<"6-Change password"<<endl;
+    cout<<"7-Sign out"<<endl;
     choice = AuxiliaryMethods ::getChar();
     return choice;
 
