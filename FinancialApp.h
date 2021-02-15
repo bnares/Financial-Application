@@ -49,6 +49,7 @@ class FinancialApp
         void printMonthlyResult();
         void printLastMonthResult();
         void printResultOfSelectedPeriodOfTime();
+        void changePassword();
         //testowe
         void printExpensesDate();
         void printIncomesDate();

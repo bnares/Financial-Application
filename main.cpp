@@ -80,6 +80,13 @@ int main()
                     system("pause");
                     break;
                 }
+            case '6':
+                {
+                    cout<<"przed"<<endl;
+                    financialApp.changePassword();
+                    cout<<"po"<<endl;
+                    break;
+                }
             }
         }
 

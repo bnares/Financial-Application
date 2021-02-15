@@ -88,3 +88,9 @@ void FinancialApp :: printResultOfSelectedPeriodOfTime()
 {
     loggedUserManager ->selectPeriodOfTime();
 }
+
+
+void FinancialApp :: changePassword()
+{
+    userMenager.changePassword();
+}

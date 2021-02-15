@@ -178,3 +178,10 @@ int UserFile :: getIdLoggedUser()
 
     return idOfLoggedUser;
 }
+
+
+
+CMarkup UserFile :: getCMarkup()
+{
+    return xml;
+}

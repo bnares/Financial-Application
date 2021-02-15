@@ -29,6 +29,7 @@ public:
 
     void userRegister();
     int signIn();
+    CMarkup getCMarkup();
 
 };
 
