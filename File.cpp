@@ -1,8 +1,6 @@
 #include "File.h"
 
-#include <iostream>
 
-using namespace std;
 
 
 string File :: changeCommaToDot(string number)

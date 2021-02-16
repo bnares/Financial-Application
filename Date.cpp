@@ -1,8 +1,8 @@
 #include "Date.h"
 
-#include <iostream>
 
-using namespace std;
+
+
 
 bool Date :: czyJestPrzestepny()
 {

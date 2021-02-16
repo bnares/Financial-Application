@@ -4,6 +4,9 @@
 //#include <ctime>
 #include <windows.h>
 #include <sstream>
+#include <iostream>
+
+using namespace std;
 
 
 class Date

@@ -1,9 +1,9 @@
-#include <iostream>
-#include "AuxiliaryMethods.h"
+
+
 #include "User.h"
 
 
-using namespace std;
+
 
 void User :: setUserId(int idNumber)
     {

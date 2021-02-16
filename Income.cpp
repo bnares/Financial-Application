@@ -1,8 +1,6 @@
 #include "Income.h"
 
-#include <iostream>
 
-using namespace std;
 
 
 

@@ -1,8 +1,7 @@
-#include <iostream>
+
 #include "UsersFiles.h"
 
 
-using namespace std;
 
 UserFile :: UserFile(string usersFileName)
 : USERS_FILE_NAME(usersFileName), lastUserId(findLastUserId())

@@ -1,7 +1,6 @@
-#include <iostream>
+
 #include "Interface.h"
 
-using namespace std;
 
 
 char Menu::openingMenu()

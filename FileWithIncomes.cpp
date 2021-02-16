@@ -1,10 +1,4 @@
 #include "FileWithIncomes.h"
-#include <iostream>
-#include "Income.h"
-
-
-using namespace std;
-
 
 
 

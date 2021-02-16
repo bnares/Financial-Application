@@ -1,8 +1,5 @@
 #include "Expense.h"
 
-#include <iostream>
-
-using namespace std;
 
 
 

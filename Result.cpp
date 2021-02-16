@@ -1,8 +1,7 @@
-#include <iostream>
+
 #include "Result.h"
 
 
-using namespace std;
 
 
 
