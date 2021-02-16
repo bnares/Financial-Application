@@ -13,4 +13,11 @@
 <Name>Tymon</Name>
 <Surname>Ostrouch</Surname>
 </User>
+<User>
+<ID>3</ID>
+<Login>piotr</Login>
+<Password>test</Password>
+<Name>tomek</Name>
+<Surname>tam</Surname>
+</User>
 </Users>

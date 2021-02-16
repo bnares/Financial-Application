@@ -59,6 +59,8 @@ void  UserFile :: addUserToFile()
 {
     string id, login= "", password="", name="", surname="";
     vector <string> data = {login, password, name, surname};
+    vector <string> display = {"Login: ", "Password: ", "Name: ","Surname: "};
+    int indicator =0;
 
 
     for(vector <string>:: iterator itr = data.begin(); itr != data.end(); itr++)
@@ -66,11 +68,10 @@ void  UserFile :: addUserToFile()
         string text="";
         cin.clear();
         cin.sync();
-        cout<<"write sequentially login, password, name and surname, press enter each time ";
+        cout<<display.at(indicator);
         getline(cin, text);
         *itr = text;
-        //cout<<"itr :"<<*itr<<endl;
-        cout<<endl;
+        indicator++;
     }
 
     id = AuxiliaryMethods :: convertNumberToString(lastUserId);
@@ -164,7 +165,7 @@ int UserFile :: signIn()
     }
     if(occurances ==0)
     {
-        cout<<"Nieprawidlowy login lub haslo"<<endl;
+        cout<<"Wrong Login or Password. Try again"<<endl;
         system("pause");
         setIdOfLoggedUser(0);
         return 0;
