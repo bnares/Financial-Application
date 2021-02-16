@@ -31,6 +31,12 @@ bool File :: chceckDateWord(vector <string> date)
                  cout<<"if number in day or month position is less than 10, use prefix 0 before number for example 2020-03-08"<<endl;
                  return false;
              }
+
+             if(iteratorWord.length()>2)
+             {
+                 cout<<"Too manu digits in month or day parts"<<endl;
+                 return false;
+             }
           }
       }
   }
