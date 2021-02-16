@@ -41,4 +41,11 @@
 <Descritpion>bnares</Descritpion>
 <Amount>289.78</Amount>
 </Wydatki>
+<Wydatki>
+<IdOfActivity>7</IdOfActivity>
+<UserId>2</UserId>
+<Date>2021-01-27</Date>
+<Descritpion>bnares</Descritpion>
+<Amount>1456.04</Amount>
+</Wydatki>
 </Activities>

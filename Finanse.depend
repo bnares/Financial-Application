@@ -35,7 +35,7 @@
 	"UserMenager.h"
 	"LoggedUserManager.h"
 
-1613415883 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\auxiliarymethods.cpp
+1613495617 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\auxiliarymethods.cpp
 	<iostream>
 	"AuxiliaryMethods.h"
 
@@ -48,7 +48,7 @@
 	"AuxiliaryMethods.h"
 	"User.h"
 
-1613402432 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\usermenager.cpp
+1613495490 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\usermenager.cpp
 	<iostream>
 	"UserMenager.h"
 
@@ -73,7 +73,7 @@
 	<windows.h>
 	"Markup.h"
 
-1613415082 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\usersfiles.cpp
+1613495251 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\usersfiles.cpp
 	<iostream>
 	"UsersFiles.h"
 
@@ -132,7 +132,7 @@
 	"Markup.h"
 	"AuxiliaryMethods.h"
 
-1613062653 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
+1613496104 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\file.cpp
 	"File.h"
 	<iostream>
 
@@ -153,7 +153,7 @@
 	<iostream>
 	"Income.h"
 
-1613424982 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\filewithexpenses.cpp
+1613496283 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\filewithexpenses.cpp
 	"FileWithExpenses.h"
 	<iostream>
 	"Expense.h"

@@ -13,7 +13,7 @@ char AuxiliaryMethods::getChar()
         getline(cin, tekst);
         if(tekst.length()>1)
         {
-            cout<<"wpisz pojedynczy znak"<<endl;
+            cout<<"Write single Char"<<endl;
         }
         else if(tekst.length() ==1)
         {
@@ -22,7 +22,7 @@ char AuxiliaryMethods::getChar()
         }
         else
         {
-            cout<<"Nie wybrales zadnej opcji"<<endl;
+            cout<<"You haven't choswn any option"<<endl;
         }
     }
     return znak;
@@ -45,12 +45,10 @@ int AuxiliaryMethods :: convertStringToNUmber(string textToConvert)
 {
     stringstream ss;
     int number;
-    //cout<<"Pobiersza: "<<textToConvert<<endl;
+
 
     ss <<textToConvert;
     ss>>number;
-    //cout<<"Oddajesz: "<<number<<endl;
-    //system("pause");
     return number;
 }
 
@@ -78,11 +76,10 @@ string AuxiliaryMethods :: getText()
 
 int AuxiliaryMethods :: getNumber()
 {
-    //string text;
+
     int number;
     cin.clear();
     cin.sync();
     cin>>number;
-    //number = convertStringToNUmber(text);
     return number;
 }

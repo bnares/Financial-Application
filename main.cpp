@@ -82,15 +82,13 @@ int main()
                 }
             case '6':
                 {
-                    cout<<"przed"<<endl;
                     financialApp.changePassword();
-                    cout<<"po"<<endl;
                     break;
                 }
             case '7':
                 {
                     controlValue =0;
-                    cout<<"Wylogowywanie..."<<endl;
+                    cout<<"Signing out..."<<endl;
                     Sleep(1000);
                 }
             }

@@ -9,7 +9,6 @@ string File :: changeCommaToDot(string number)
 {
     string tekst = number;
     replace(tekst.begin(), tekst.end(), ',', '.');
-    cout<<"after modyfication with comma: "<<tekst<<endl;
     return tekst;
 }
 
@@ -143,9 +142,12 @@ void File :: addToFile()
     idActivity = AuxiliaryMethods::convertNumberToString(idNumberOfTheLastActivity+1);
     idUser = AuxiliaryMethods::convertNumberToString(idNumberOfUser);
     vector <string> data = {date, descriptionOfActivity, money};
+    vector <string> display = {"Date as yyyy-mm-dd: ", "Description: ","Amount of money: "};
+    int iter =0;
     for(vector <string>:: iterator it= data.begin(); it != data.end(); it++ )
     {
-        cout<<"Write subsequently date as yyyy-mm-dd, descritpion, amount of money: "<<endl;
+        //cout<<"Write subsequently date as yyyy-mm-dd, descritpion, amount of money: "<<endl;
+        cout<<display.at(iter);
         *it = AuxiliaryMethods ::getText();
         if(vectorIndex == 0)
         {
@@ -164,6 +166,7 @@ void File :: addToFile()
             *it = changeCommaToDot(*it);
         }
         vectorIndex++;
+        iter++;
 
     }
 

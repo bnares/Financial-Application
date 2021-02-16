@@ -65,7 +65,7 @@ void UserMenager :: changePassword()
             {
                 xml.FindElem("Password");
                 xml.RemoveElem();
-                cout<<"Podaj nowe haslo: ";
+                cout<<"New Password: ";
                 string noweHaslo;
                 noweHaslo = AuxiliaryMethods::getText();
                 xml.AddElem("Password", noweHaslo);

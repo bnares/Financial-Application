@@ -94,7 +94,7 @@ vector <Expense>  ExpensesFile :: getExpenses()
 int ExpensesFile :: expenseSize()
 {
     int rozmiar = expenses.size();
-    cout<<"Rozmiar po konstruktorze: "<<rozmiar<<endl;
+    cout<<"Size after constructor: "<<rozmiar<<endl;
     return rozmiar;
 }
 

@@ -83,7 +83,7 @@ void LoggedUserManager :: printCurrentMonthResult()
         }
         else
         {
-            cout<<"sth went wrong sorry with the date, sorry..."<<endl;
+            cout<<"sth went wrong, sorry with the date, sorry..."<<endl;
             Sleep(1000);
             break;
         }
@@ -151,7 +151,6 @@ void LoggedUserManager :: printPreviousMonthResult()
     int todayDateAsNumber = today.getTodayDateAsNumber();
     string todayDateAsString = AuxiliaryMethods::convertNumberToString(todayDateAsNumber);
     int lengthOfStringDate = todayDateAsString.length();
-    //string todayYearAsString = todayDateAsNumber.erase(4,lengthOfStringDate-4);
     string yerarString="";
     string monthString="";
     string dayString="";
@@ -173,7 +172,6 @@ void LoggedUserManager :: printPreviousMonthResult()
     }
     int yearNumber = AuxiliaryMethods::convertStringToNUmber(yerarString);
     int monthNumber = AuxiliaryMethods::convertStringToNUmber(monthString)-1;
-    //int daysNumber = AuxiliaryMethods::convertStringToNUmber(dayString);
     int daysNumber;
 
     if(monthNumber==2)
@@ -285,42 +283,55 @@ void LoggedUserManager :: selectPeriodOfTime()
    int month;
    int day;
    vector<int> data = {year, month, day};
+   vector <string> display = {"Year: ","Month: ","Day: "};
+   int iter =0;
    cout<<"Select first date"<<endl;
    for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
    {
-        cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+        //cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+       cout<<display.at(iter);
        *it = AuxiliaryMethods::getNumber();
+       iter++;
    }
 
    Date lowerDate(data[2], data[1], data[0]);
    bool firstDateCond = lowerDate.ileDniMaMiesiac();
-   if(firstDateCond==false)
+   while(firstDateCond==false)
    {
+       iter=0;
        cout<<"wrong date"<<endl;
        for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
         {
-            cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+            //cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+            cout<<display.at(iter);
             *it = AuxiliaryMethods::getNumber();
+            iter++;
         }
         Date lowerDate(data[2], data[1], data[0]);
         firstDateCond = lowerDate.ileDniMaMiesiac();
    }
    cout<<"Select second date"<<endl;
+   iter=0;
    for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
    {
-        cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+        //cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+        cout<<display.at(iter);
        *it = AuxiliaryMethods::getNumber();
+       iter++;
    }
 
    Date upperDate(data[2], data[1], data[0]);
    bool secondDateCond = upperDate.ileDniMaMiesiac();
-   if(secondDateCond==false)
+   while(secondDateCond==false)
    {
+       iter=0;
        cout<<"Wrong date"<<endl;
        for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
         {
-            cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+            //cout<<"Write sussequently year,month,day. press 'enter' each time: ";
+            cout<<display.at(iter);
             *it = AuxiliaryMethods::getNumber();
+            iter++;
         }
         Date upperDate(data[2], data[1], data[0]);
         secondDateCond = upperDate.ileDniMaMiesiac();
