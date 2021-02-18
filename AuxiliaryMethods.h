@@ -19,7 +19,6 @@ class AuxiliaryMethods
         static int getNumber();
         static float convertStringToFloatNumber(string stringFloat);
         static bool isNumber(vector <string> text);
-        static bool findDash(string text);
         static vector <string> createVectorFromDateWords(string date);
 };
 

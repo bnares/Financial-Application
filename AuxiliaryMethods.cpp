@@ -42,19 +42,7 @@ bool AuxiliaryMethods::isNumber(vector <string> text)
 }
 
 
-bool AuxiliaryMethods::findDash(string text)
-{
-    size_t iterFirst = text.find("-");
-    size_t iterSecond = text.find(5,text.length(),"-");
-    if(iterFirst == 4 && iterSecond == 8)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+
 
 
 vector <string> AuxiliaryMethods::createVectorFromDateWords(string date)

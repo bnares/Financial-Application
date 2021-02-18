@@ -34,10 +34,10 @@
 	"UserMenager.h"
 	"LoggedUserManager.h"
 
-1613649231 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\auxiliarymethods.cpp
+1613656187 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
 
-1613641654 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\auxiliarymethods.h
+1613656187 d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\auxiliarymethods.h
 	<iostream>
 	<sstream>
 	<vector>
@@ -94,7 +94,7 @@
 	<vector>
 	<windows.h>
 
-1613648520 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\loggedusermanager.cpp
+1613651645 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\loggedusermanager.cpp
 	"LoggedUserManager.h"
 
 1613648520 source:d:\calculation\nauka_c++\file_play\wyzwania2\sprawdz\ksiazkaadresowaobiektowoii-main\ksiazkaadresowaobiektowoii-main\finanse\result.cpp
