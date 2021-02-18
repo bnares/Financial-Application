@@ -5,15 +5,14 @@
 
 
 
-void FinancialApp:: registerUser()
+void FinancialApp::registerUser()
 {
     userMenager.userRegister();
 }
 
 
-void FinancialApp :: signIn()
+void FinancialApp::signIn()
 {
-    //userMenager.signIn();
     setIdLoggedUser(userMenager.signIn());
     if(idOfLoggedUser!=0)
     {
@@ -23,43 +22,43 @@ void FinancialApp :: signIn()
 }
 
 
-int FinancialApp :: getLastUserID()
+int FinancialApp::getLastUserID()
 {
     return userMenager.getLastUserId();
 }
 
-void FinancialApp :: setIdLoggedUser(int id)
+void FinancialApp::setIdLoggedUser(int id)
 {
     idOfLoggedUser = id;
 }
 
 
 
-int FinancialApp :: getIdOfLoggedUser()
+int FinancialApp::getIdOfLoggedUser()
 {
     return userMenager.getIdOfLoggedUser();
 }
 
 
-void FinancialApp :: AddExpense()
+void FinancialApp::AddExpense()
 {
 
     loggedUserManager -> addExpenseToFile();
 }
 
-void FinancialApp :: AddIncome()
+void FinancialApp::AddIncome()
 {
    loggedUserManager ->addIncomeToFile();
 }
 
 
-int FinancialApp :: getFirstDate()
+int FinancialApp::getFirstDate()
 {
     return loggedUserManager -> getDate();
 }
 
 
-void FinancialApp :: printExpensesDate()
+void FinancialApp::printExpensesDate()
 {
     loggedUserManager -> printSortedExpenses();
 }
@@ -69,26 +68,26 @@ void FinancialApp :: printIncomesDate()
     loggedUserManager -> printSortedIncomes();
 }
 
-void FinancialApp :: printMonthlyResult()
+void FinancialApp::printMonthlyResult()
 {
     loggedUserManager ->printCurrentMonthResult();
 }
 
 
 
-void FinancialApp :: printLastMonthResult()
+void FinancialApp::printLastMonthResult()
 {
     loggedUserManager ->printPreviousMonthResult();
 }
 
 
-void FinancialApp :: printResultOfSelectedPeriodOfTime()
+void FinancialApp::printResultOfSelectedPeriodOfTime()
 {
     loggedUserManager ->selectPeriodOfTime();
 }
 
 
-void FinancialApp :: changePassword()
+void FinancialApp::changePassword()
 {
     userMenager.changePassword();
 }

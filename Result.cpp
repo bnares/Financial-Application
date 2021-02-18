@@ -2,51 +2,45 @@
 #include "Result.h"
 
 
-
-
-
-
-
-
-int Result :: getIdUser()
+int Result::getIdUser()
 {
         return idUser;
 }
 
 
-int Result :: getDate()
+int Result::getDate()
 {
     return date;
 }
 
-float Result :: getAmountOfMoney()
+float Result::getAmountOfMoney()
 {
     return amountOfMoney;
 }
 
 
-string Result :: getDescription()
+string Result::getDescription()
 {
     return desciptonOfActivity;
 }
 
 
-void Result :: setIdUser(int newId)
+void Result::setIdUser(int newId)
 {
     idUser = newId;
 }
-void Result :: setDate(int newDate)
+void Result::setDate(int newDate)
 {
     date = newDate;
 }
 
-void Result :: setDescription(string newDescription)
+void Result::setDescription(string newDescription)
 {
     desciptonOfActivity = newDescription;
 }
 
 
-void Result :: setAmountOfMoney(float money)
+void Result::setAmountOfMoney(float money)
 {
     amountOfMoney = money;
 }

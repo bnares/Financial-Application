@@ -1,16 +1,13 @@
 #include "Income.h"
 
 
-
-
-
-int Income :: getIncomeId()
+int Income::getIncomeId()
 {
     return incomeId;
 }
 
 
-void Income :: setIncomeId(int newIncomeId)
+void Income::setIncomeId(int newIncomeId)
 {
     incomeId = newIncomeId;
 }

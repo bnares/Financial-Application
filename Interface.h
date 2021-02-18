@@ -1,8 +1,5 @@
 #ifndef INTERFEJS_H
-
 #define INTERFEJS_H
-
-
 #include <iostream>
 #include "AuxiliaryMethods.h"
 
@@ -17,10 +14,6 @@ public:
     char openingMenu();
     char loggedInMenu();
 
-
 };
-
-
-
 
 #endif // INTERFEJS_H

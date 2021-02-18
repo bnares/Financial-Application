@@ -1,18 +1,14 @@
 #include "Expense.h"
 
 
-
-
-
-
-int Expense :: getExpenseId()
+int Expense::getExpenseId()
 {
     return expenseId;
 }
 
 
 
-void Expense :: setExpenseId(int newExpenseId)
+void Expense::setExpenseId(int newExpenseId)
 {
     expenseId = newExpenseId;
 }

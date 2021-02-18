@@ -14,13 +14,8 @@ class IncomesFile : public File
 {
     vector <Income> incomes;
 
-
-
 public:
     void readFromFileData(vector <Income> &incomes);
-
-
-
 
     IncomesFile(string fileName, int userId)
     : File(fileName, userId)

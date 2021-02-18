@@ -7,7 +7,7 @@ char Menu::openingMenu()
 {
     char choice;
     system("cls");
-    cout<<"MENU GLOWNE"<<endl;
+    cout<<" MAIN MENU "<<endl;
     cout<<"-----------"<<endl;
     cout<<"1-Register"<<endl;
     cout<<"2-Sign in"<<endl;
@@ -15,15 +15,11 @@ char Menu::openingMenu()
     cout<<"User choice: ";
 
     choice = AuxiliaryMethods::getChar();
-
     return choice;
-
-
-
 }
 
 
-char Menu :: loggedInMenu()
+char Menu::loggedInMenu()
 {
     char choice;
     system("cls");

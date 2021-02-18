@@ -1,7 +1,4 @@
-
 #include "AuxiliaryMethods.h"
-
-
 
 
 char AuxiliaryMethods::getChar()
@@ -29,8 +26,52 @@ char AuxiliaryMethods::getChar()
 }
 
 
+bool AuxiliaryMethods::isNumber(vector <string> text)
+{
+    for(vector <string>::iterator it = text.begin(); it!=text.end(); it++)
+    {
+        for(int i=0; i<(*it).length(); i++)
+        {
+            if(isdigit((*it)[i])==false)
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
 
-float AuxiliaryMethods :: convertStringToFloatNumber(string stringFloat)
+
+bool AuxiliaryMethods::findDash(string text)
+{
+    size_t iterFirst = text.find("-");
+    size_t iterSecond = text.find(5,text.length(),"-");
+    if(iterFirst == 4 && iterSecond == 8)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+
+vector <string> AuxiliaryMethods::createVectorFromDateWords(string date)
+{
+        vector <string> words;
+        stringstream ss(date);
+        string token;
+        while(getline(ss,token,'-'))
+        {
+            words.push_back(token);
+        }
+        return words;
+}
+
+
+
+float AuxiliaryMethods::convertStringToFloatNumber(string stringFloat)
 {
     stringstream ss;
     float numberFloat = 0.0;
@@ -41,7 +82,7 @@ float AuxiliaryMethods :: convertStringToFloatNumber(string stringFloat)
 
 
 
-int AuxiliaryMethods :: convertStringToNUmber(string textToConvert)
+int AuxiliaryMethods::convertStringToNUmber(string textToConvert)
 {
     stringstream ss;
     int number;
@@ -53,7 +94,7 @@ int AuxiliaryMethods :: convertStringToNUmber(string textToConvert)
 }
 
 
-string AuxiliaryMethods :: convertNumberToString(int numberToConvert)
+string AuxiliaryMethods::convertNumberToString(int numberToConvert)
 {
     stringstream ss;
     string text;
@@ -64,7 +105,7 @@ string AuxiliaryMethods :: convertNumberToString(int numberToConvert)
 }
 
 
-string AuxiliaryMethods :: getText()
+string AuxiliaryMethods::getText()
 {
     string text;
     cin.sync();
@@ -74,7 +115,7 @@ string AuxiliaryMethods :: getText()
 }
 
 
-int AuxiliaryMethods :: getNumber()
+int AuxiliaryMethods::getNumber()
 {
 
     int number;

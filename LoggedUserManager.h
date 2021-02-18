@@ -1,6 +1,5 @@
 #ifndef LOGGEDUSERMANAGER_H
 #define LOGGEDUSERMANAGER_H
-
 #include <iostream>
 #include "Income.h"
 #include "Expense.h"
@@ -10,6 +9,7 @@
 #include <windows.h>
 
 using namespace std;
+
 
 class LoggedUserManager
 {
@@ -40,20 +40,8 @@ public:
     void printCurrentMonthResult();
     void printPreviousMonthResult();
     void selectPeriodOfTime();
-
-    //testowe
     void printSortedExpenses();
     void printSortedIncomes();
 };
-
-
-
-
-
-
-
-
-
-
 
 #endif LOGGEDUSERMANAGER_H

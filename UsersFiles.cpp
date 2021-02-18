@@ -1,34 +1,32 @@
-
 #include "UsersFiles.h"
 
 
-
-UserFile :: UserFile(string usersFileName)
+UserFile::UserFile(string usersFileName)
 : USERS_FILE_NAME(usersFileName), lastUserId(findLastUserId())
 {
 
 }
 
 
-void UserFile :: setIdOfLoggedUser(int idToSet)
+void UserFile::setIdOfLoggedUser(int idToSet)
 {
     idOfLoggedUser = idToSet;
 
 }
 
 
-int UserFile :: getLastUserId()
+int UserFile::getLastUserId()
 {
     return lastUserId;
 }
 
-void UserFile :: setLastUserId(int numberToSet)
+void UserFile::setLastUserId(int numberToSet)
 {
     lastUserId = numberToSet;
 }
 
 
-int UserFile :: findLastUserId()
+int UserFile::findLastUserId()
 {
 
     int idNumber =0;
@@ -54,7 +52,7 @@ int UserFile :: findLastUserId()
 
 }
 
-void  UserFile :: addUserToFile()
+void  UserFile::addUserToFile()
 {
     string id, login= "", password="", name="", surname="";
     vector <string> data = {login, password, name, surname};
@@ -73,7 +71,7 @@ void  UserFile :: addUserToFile()
         indicator++;
     }
 
-    id = AuxiliaryMethods :: convertNumberToString(lastUserId);
+    id = AuxiliaryMethods::convertNumberToString(lastUserId);
 
     if(xml.Load(USERS_FILE_NAME.c_str()))
     {
@@ -105,7 +103,7 @@ void  UserFile :: addUserToFile()
 
 
 
-void UserFile :: userRegister()
+void UserFile::userRegister()
 {
 
     if(xml.Load(USERS_FILE_NAME.c_str()))
@@ -125,7 +123,7 @@ void UserFile :: userRegister()
 }
 
 
-int UserFile :: signIn()
+int UserFile::signIn()
 {
     int occurances = 0;
     cout<<"Login: ";
@@ -173,7 +171,7 @@ int UserFile :: signIn()
 
 
 
-int UserFile :: getIdLoggedUser()
+int UserFile::getIdLoggedUser()
 {
 
     return idOfLoggedUser;
@@ -181,7 +179,7 @@ int UserFile :: getIdLoggedUser()
 
 
 
-CMarkup UserFile :: getCMarkup()
+CMarkup UserFile::getCMarkup()
 {
     return xml;
 }

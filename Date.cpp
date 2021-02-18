@@ -1,10 +1,7 @@
 #include "Date.h"
 
 
-
-
-
-bool Date :: czyJestPrzestepny()
+bool Date::czyJestPrzestepny()
 {
     if (lata%400 ==0 || (lata %4==0 && lata %100 !=0))
     {
@@ -16,7 +13,7 @@ bool Date :: czyJestPrzestepny()
     }
 }
 
-bool Date :: ileDniMaMiesiac()
+bool Date::ileDniMaMiesiac()
 {
     if (miesiace ==2 && czyPrzystepny ==true)
     {
@@ -82,7 +79,7 @@ bool Date :: ileDniMaMiesiac()
 
 
 
-int Date :: countLeapYears()
+int Date::countLeapYears()
 {
     int podanyRok = lata;
     if(miesiace <=2)
@@ -95,7 +92,7 @@ int Date :: countLeapYears()
 
 
 
-Date :: Date()
+Date::Date()
 {
         dni = 0;
         miesiace = 0;
@@ -104,7 +101,7 @@ Date :: Date()
 
 
 
-Date :: Date(int wpiszDzien, int wpiszMiesiac, int wpiszLata): czyPrzystepny(czyJestPrzestepny())
+Date::Date(int wpiszDzien, int wpiszMiesiac, int wpiszLata): czyPrzystepny(czyJestPrzestepny())
 {
         dni =wpiszDzien;
         miesiace =wpiszMiesiac;
@@ -114,21 +111,21 @@ Date :: Date(int wpiszDzien, int wpiszMiesiac, int wpiszLata): czyPrzystepny(czy
 }
 
 
-bool Date :: PobierzCzyRokJestPrzestepny()
+bool Date::PobierzCzyRokJestPrzestepny()
 {
     return czyPrzystepny;
 }
 
 
 
-int Date :: pobierzLiczbeLatPrzestepnych()
+int Date::pobierzLiczbeLatPrzestepnych()
 {
     return liczbaLatPrzestepnych;
 }
 
 
 
-int Date :: getDateAsNumber()
+int Date::getDateAsNumber()
 {
     stringstream ssy;
     ssy<<lata;
@@ -166,7 +163,7 @@ int Date :: getDateAsNumber()
 
 
 
-int Date :: getTodayDateAsNumber()
+int Date::getTodayDateAsNumber()
 {
     SYSTEMTIME date;
     GetLocalTime(&date);
@@ -211,19 +208,60 @@ int Date :: getTodayDateAsNumber()
 
 
 
+string Date::getTodayDate()
+{
+    SYSTEMTIME date;
+    GetLocalTime(&date);
+    int year = date.wYear;
+    int month = date.wMonth;
+    int day = date.wDay;
+
+    stringstream ssy;
+    ssy<<year;
+    stringstream ssm;
+    ssm<<month;
+    stringstream ssd;
+    ssd<<day;
+
+    string stringYear;
+    ssy>>stringYear;
+    string stringMonth;
+    ssm>>stringMonth;
+    string stringDay;
+    ssd>>stringDay;
 
 
-void Date :: setDays(int days)
+    ssy>>stringYear;
+    ssm>>stringMonth;
+    ssd>>stringDay;
+
+    if(month<=9)
+    {
+        stringMonth = "0"+stringMonth;
+    }
+    if(day<=9)
+    {
+        stringDay = "0"+stringDay;
+    }
+    string stringNumber = stringYear+"-"+stringMonth+"-"+stringDay;
+    return stringNumber;
+}
+
+
+
+
+
+void Date::setDays(int days)
 {
     dni = days;
 }
 
-void Date :: setYear(int yearNumber)
+void Date::setYear(int yearNumber)
 {
     lata = yearNumber;
 }
 
-void Date :: setMonth(int month)
+void Date::setMonth(int month)
 {
     miesiace = month;
 }
@@ -231,7 +269,7 @@ void Date :: setMonth(int month)
 
 
 
-int Date :: countingDaysInSpecificMonth()
+int Date::countingDaysInSpecificMonth()
 {
     if(miesiace == 1 || miesiace == 3 || miesiace == 5 || miesiace==7 || miesiace==8 || miesiace == 10 || miesiace ==12)
     {

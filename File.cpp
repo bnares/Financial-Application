@@ -2,8 +2,7 @@
 
 
 
-
-string File :: changeCommaToDot(string number)
+string File::changeCommaToDot(string number)
 {
     string tekst = number;
     replace(tekst.begin(), tekst.end(), ',', '.');
@@ -13,8 +12,12 @@ string File :: changeCommaToDot(string number)
 
 
 
-bool File :: chceckDateWord(vector <string> date)
+bool File::chceckDateWord(vector <string> date)
 {
+  if(date.size()!=3)
+  {
+      return false;
+  }
   for(vector <string>:: iterator it = date.begin(); it!=date.end(); it++)
   {
       string iteratorWord = *it;
@@ -34,9 +37,10 @@ bool File :: chceckDateWord(vector <string> date)
 
              if(iteratorWord.length()>2)
              {
-                 cout<<"Too manu digits in month or day parts"<<endl;
+                 cout<<"Too many digits in month or day parts"<<endl;
                  return false;
              }
+
           }
       }
   }
@@ -56,7 +60,7 @@ bool File :: chceckDateWord(vector <string> date)
 
 }
 
-vector <string> File :: createVectorFromDateWords(string date)
+vector <string> File::createVectorFromDateWords(string date)
 {
         vector <string> words;
         stringstream ss(date);
@@ -69,7 +73,7 @@ vector <string> File :: createVectorFromDateWords(string date)
 }
 
 
-string File :: createStringNumberFromStringVector(vector <string> data)
+string File::createStringNumberFromStringVector(vector <string> data)
 {
     string stringNumber = "";
     for(int i =0; i<data.size(); i++)
@@ -82,7 +86,7 @@ string File :: createStringNumberFromStringVector(vector <string> data)
 
 
 
-string File :: modifyFileName(string fileName)
+string File::modifyFileName(string fileName)
 {
     int lengthOfWord = fileName.length()-4;
     string word = fileName.erase(lengthOfWord,4);
@@ -91,10 +95,8 @@ string File :: modifyFileName(string fileName)
 
 
 
-int File :: findIdNumberOfTheLastActivity()
+int File::findIdNumberOfTheLastActivity()
 {
-    //int lengthOfTitle = FILE_NAME.length()-4;
-    //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
     string mainTitleOfFile = modifyFileName(FILE_NAME);
     int number=0;
     if(xml.Load(FILE_NAME.c_str()))
@@ -118,13 +120,13 @@ int File :: findIdNumberOfTheLastActivity()
 }
 
 
-int File :: getIdNumberOfTheLastActivity()
+int File::getIdNumberOfTheLastActivity()
 {
     return idNumberOfTheLastActivity;
 }
 
 
-void File :: setIdNumberOfTheLastActivity(int newLastNumberActivity)
+void File::setIdNumberOfTheLastActivity(int newLastNumberActivity)
 {
     idNumberOfTheLastActivity = newLastNumberActivity;
 }
@@ -133,13 +135,8 @@ void File :: setIdNumberOfTheLastActivity(int newLastNumberActivity)
 
 
 
-void File :: addToFile()
+void File::addToFile()
 {
-
-
-
-    //int lengthOfTitle = FILE_NAME.length()-4;
-    //string mainTitleOfFile = FILE_NAME.erase(lengthOfTitle,4);
     int vectorIndex = 0;
     string mainTitleOfFile = modifyFileName(FILE_NAME);
     string idActivity = "", idUser="", date="", descriptionOfActivity="", money="";
@@ -148,22 +145,79 @@ void File :: addToFile()
     vector <string> data = {date, descriptionOfActivity, money};
     vector <string> display = {"Date as yyyy-mm-dd: ", "Description: ","Amount of money: "};
     int iter =0;
+    bool todayDate = false;
     for(vector <string>:: iterator it= data.begin(); it != data.end(); it++ )
     {
-        //cout<<"Write subsequently date as yyyy-mm-dd, descritpion, amount of money: "<<endl;
+
         cout<<display.at(iter);
-        *it = AuxiliaryMethods ::getText();
-        if(vectorIndex == 0)
+        if(vectorIndex ==0)
         {
+            cout<<endl;
+            cout<<"Do you want use today date Y/N?"<<endl;
+            string setBool;
+            cin.clear();
+            cin.sync();
+            cin>>setBool;
+            setBool[0] = toupper(setBool[0]);
+            while(setBool != "Y" || setBool != "N")
+            {
+
+
+                if(setBool == "Y")
+                {
+                    todayDate = true;
+                    break;
+                }
+                else if(setBool=="N")
+                {
+                    todayDate = false;
+                    break;
+                }
+                else
+                {
+                    cout<<"Wrong answear, try again:";
+                    cin.clear();
+                    cin.sync();
+                    cin>>setBool;
+
+                }
+
+            }
+
+        }
+
+        if(vectorIndex ==1 || vectorIndex==2)
+        {
+            *it = AuxiliaryMethods ::getText();
+        }
+        if(vectorIndex == 0 && todayDate==false)
+        {
+            cout<<"Date: ";
+            *it = AuxiliaryMethods ::getText();
+            while(*it=="")
+            {
+              cout<<"Date is empty. Please write a date: ";
+              *it = AuxiliaryMethods ::getText();
+            }
             vector <string> word = createVectorFromDateWords(*it);
             bool checkingDatePoint = chceckDateWord(word);
             while(checkingDatePoint==false)
             {
-                cout<<"Date is wrong, try again"<<endl;
+                cout<<"Date is wrong, try again: ";
                 data[0] = AuxiliaryMethods::getText();
+                while(data[0]=="")
+                {
+                  cout<<"Date is empty. Please write a date: ";
+                  data[0] = AuxiliaryMethods ::getText();
+                }
                 checkingDatePoint = chceckDateWord(createVectorFromDateWords(data[0]));
 
             }
+        }
+        if(vectorIndex ==0 && todayDate==true)
+        {
+
+                *it = Date::getTodayDate();
         }
         if(vectorIndex==2)
         {

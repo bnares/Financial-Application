@@ -1,8 +1,5 @@
 #ifndef USERMENAGER_H
-
 #define USERMENAGER_H
-
-
 #include <iostream>
 #include <vector>
 #include "AuxiliaryMethods.h"

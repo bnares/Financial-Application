@@ -37,14 +37,4 @@ public:
 };
 
 
-
-
-
-
-
-
-
-
-
-
 #endif // FILEWITHEXPENSES_H

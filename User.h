@@ -1,8 +1,5 @@
 #ifndef USER_H
-
 #define USER_H
-
-
 #include <iostream>
 #include "AuxiliaryMethods.h"
 
@@ -22,17 +19,12 @@ public:
     void setPassword(string newPassword);
     void setName(string newName);
     void setSurname(string newSurname);
-
     int getUserId();
     string getLogin();
     string getPassword();
     string getName();
     string getSurname();
-
-
-
 };
-
 
 
 #endif

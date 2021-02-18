@@ -30,6 +30,7 @@ class Date
     void setMonth(int month);
     int countingDaysInSpecificMonth();
     int getDateAsNumber();
+    static string getTodayDate();
 
 };
 

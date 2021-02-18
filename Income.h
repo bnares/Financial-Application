@@ -19,11 +19,4 @@ public:
 };
 
 
-
-
-
-
-
-
-
 #endif // INCOME_H

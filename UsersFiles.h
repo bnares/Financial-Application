@@ -1,7 +1,5 @@
 #ifndef USERSFILES_H
-
 #define USERSFILES_H
-
 #include <iostream>
 #include <vector>
 #include "User.h"
@@ -21,21 +19,14 @@ class UserFile
     void setLastUserId(int numberToSet);
     void setIdOfLoggedUser(int idToSet);
 
-
 public:
     UserFile(string usersFileName);
     int getLastUserId();
     int getIdLoggedUser();
-
     void userRegister();
     int signIn();
     CMarkup getCMarkup();
 
 };
-
-
-
-
-
 
 #endif // USERSFILES_H

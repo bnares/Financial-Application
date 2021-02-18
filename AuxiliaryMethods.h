@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <sstream>
+#include <vector>
+#include <algorithm>
 
 
 using namespace std;
@@ -16,6 +18,9 @@ class AuxiliaryMethods
         static string getText();
         static int getNumber();
         static float convertStringToFloatNumber(string stringFloat);
+        static bool isNumber(vector <string> text);
+        static bool findDash(string text);
+        static vector <string> createVectorFromDateWords(string date);
 };
 
 

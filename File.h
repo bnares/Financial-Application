@@ -25,9 +25,8 @@ class File
     int findIdNumberOfTheLastActivity();
     void setIdNumberOfTheLastActivity(int newLastNumberActivity);
     CMarkup xml;
-    vector <string> createVectorFromDateWords(string date);
+
     string modifyFileName(string fileName);
-    bool chceckDateWord(vector <string> date);
     string changeCommaToDot(string number);
     string createStringNumberFromStringVector(vector <string> data);
 public:
@@ -39,15 +38,10 @@ public:
 
     void addToFile();
     int getIdNumberOfTheLastActivity();
+    vector <string> createVectorFromDateWords(string date);
+    bool chceckDateWord(vector <string> date);
+
 };
-
-
-
-
-
-
-
-
 
 
 #endif // FILE_H

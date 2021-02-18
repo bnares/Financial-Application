@@ -3,7 +3,7 @@
 
 
 
-void LoggedUserManager :: addExpenseToFile()
+void LoggedUserManager::addExpenseToFile()
 {
 
     expensesFile.addToFile();
@@ -15,7 +15,7 @@ void LoggedUserManager :: addExpenseToFile()
 
 
 
-void LoggedUserManager :: addIncomeToFile()
+void LoggedUserManager::addIncomeToFile()
 {
     incomesFile.addToFile();
     incomes.clear();
@@ -24,7 +24,7 @@ void LoggedUserManager :: addIncomeToFile()
 }
 
 
-int LoggedUserManager :: getDate()
+int LoggedUserManager::getDate()
 {
 
     int dwa = expensesFile.expenseSize();
@@ -33,7 +33,7 @@ int LoggedUserManager :: getDate()
 }
 
 
-vector <Expense> LoggedUserManager :: sortExpenseByDate()
+vector <Expense> LoggedUserManager::sortExpenseByDate()
 {
     vector <Expense> copyOfExpenses = expenses;
     sort(copyOfExpenses.begin(), copyOfExpenses.end());
@@ -43,14 +43,14 @@ vector <Expense> LoggedUserManager :: sortExpenseByDate()
 
 
 
-vector <Income> LoggedUserManager :: sortIncomesByDate()
+vector <Income> LoggedUserManager::sortIncomesByDate()
 {
     vector <Income> copyOfIncomes = incomes;
     sort(copyOfIncomes.begin(), copyOfIncomes.end());
     return copyOfIncomes;
 }
 
-void LoggedUserManager :: printSortedExpenses()
+void LoggedUserManager::printSortedExpenses()
 {
     for(int i =0; i<expenses.size(); i++)
     {
@@ -58,7 +58,7 @@ void LoggedUserManager :: printSortedExpenses()
     }
 }
 
-void LoggedUserManager :: printSortedIncomes()
+void LoggedUserManager::printSortedIncomes()
 {
     for(int i =0; i<incomes.size(); i++)
     {
@@ -67,7 +67,7 @@ void LoggedUserManager :: printSortedIncomes()
 }
 
 
-void LoggedUserManager :: printCurrentMonthResult()
+void LoggedUserManager::printCurrentMonthResult()
 {
     Date currentDate;
     int dateNumber = currentDate.getTodayDateAsNumber();
@@ -143,7 +143,7 @@ void LoggedUserManager :: printCurrentMonthResult()
 
 
 
-void LoggedUserManager :: printPreviousMonthResult()
+void LoggedUserManager::printPreviousMonthResult()
 {
     Date today;
     int lowerBoundryDateNumber;
@@ -245,6 +245,7 @@ void LoggedUserManager :: printPreviousMonthResult()
         cout<<"No income in last month"<<endl;
     }
     occurrences=0;
+    cout<<endl;
     cout<<"EXPENSES"<<endl;
     for(int i =0; i<expenses.size(); i++)
     {
@@ -276,66 +277,52 @@ void LoggedUserManager :: printPreviousMonthResult()
 }
 
 
-
-void LoggedUserManager :: selectPeriodOfTime()
+void LoggedUserManager::selectPeriodOfTime()
 {
    int year;
    int month;
    int day;
-   vector<int> data = {year, month, day};
-   vector <string> display = {"Year: ","Month: ","Day: "};
-   int iter =0;
    cout<<"Select first date"<<endl;
-   for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
+   cout<<"Date as yyyy-mm-dd: ";
+   string firstDate = AuxiliaryMethods::getText();
+   vector <string> stringDateVector = AuxiliaryMethods::createVectorFromDateWords(firstDate);
+   bool chceckDate = incomesFile.chceckDateWord(stringDateVector);
+   while(chceckDate == false)
    {
-        //cout<<"Write sussequently year,month,day. press 'enter' each time: ";
-       cout<<display.at(iter);
-       *it = AuxiliaryMethods::getNumber();
-       iter++;
+       cout<<"Wrong date!"<<endl;
+       cout<<"Date as yyyy-mm-dd: ";
+       firstDate = AuxiliaryMethods::getText();
+       stringDateVector.clear();
+       stringDateVector = AuxiliaryMethods::createVectorFromDateWords(firstDate);
+       chceckDate = incomesFile.chceckDateWord(stringDateVector);
    }
+   year = AuxiliaryMethods::convertStringToNUmber(stringDateVector[0]);
+   month = AuxiliaryMethods::convertStringToNUmber(stringDateVector[1]);
+   day = AuxiliaryMethods::convertStringToNUmber(stringDateVector[2]);
 
-   Date lowerDate(data[2], data[1], data[0]);
-   bool firstDateCond = lowerDate.ileDniMaMiesiac();
-   while(firstDateCond==false)
-   {
-       iter=0;
-       cout<<"wrong date"<<endl;
-       for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
-        {
-            //cout<<"Write sussequently year,month,day. press 'enter' each time: ";
-            cout<<display.at(iter);
-            *it = AuxiliaryMethods::getNumber();
-            iter++;
-        }
-        Date lowerDate(data[2], data[1], data[0]);
-        firstDateCond = lowerDate.ileDniMaMiesiac();
-   }
+   Date lowerDate(day, month, year);
+
    cout<<"Select second date"<<endl;
-   iter=0;
-   for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
+   cout<<"Date as yyyy-mm-dd: ";
+   firstDate = AuxiliaryMethods::getText();
+   stringDateVector = AuxiliaryMethods::createVectorFromDateWords(firstDate);
+   chceckDate = incomesFile.chceckDateWord(stringDateVector);
+   while(chceckDate == false)
    {
-        //cout<<"Write sussequently year,month,day. press 'enter' each time: ";
-        cout<<display.at(iter);
-       *it = AuxiliaryMethods::getNumber();
-       iter++;
+       cout<<"Wrong date!"<<endl;
+       cout<<"Date as yyyy-mm-dd: ";
+       firstDate = AuxiliaryMethods::getText();
+       stringDateVector.clear();
+       stringDateVector = AuxiliaryMethods::createVectorFromDateWords(firstDate);
+       chceckDate = incomesFile.chceckDateWord(stringDateVector);
    }
 
-   Date upperDate(data[2], data[1], data[0]);
-   bool secondDateCond = upperDate.ileDniMaMiesiac();
-   while(secondDateCond==false)
-   {
-       iter=0;
-       cout<<"Wrong date"<<endl;
-       for(vector <int>::iterator it = data.begin(); it!=data.end(); it++)
-        {
-            //cout<<"Write sussequently year,month,day. press 'enter' each time: ";
-            cout<<display.at(iter);
-            *it = AuxiliaryMethods::getNumber();
-            iter++;
-        }
-        Date upperDate(data[2], data[1], data[0]);
-        secondDateCond = upperDate.ileDniMaMiesiac();
-   }
+   year = AuxiliaryMethods::convertStringToNUmber(stringDateVector[0]);
+   month = AuxiliaryMethods::convertStringToNUmber(stringDateVector[1]);
+   day = AuxiliaryMethods::convertStringToNUmber(stringDateVector[2]);
+
+
+   Date upperDate(day, month, year);
 
    int firstDateNumber = lowerDate.getDateAsNumber();
    int secondDateNumber = upperDate.getDateAsNumber();
@@ -393,6 +380,11 @@ void LoggedUserManager :: selectPeriodOfTime()
 
 
 }
+
+
+
+
+
 
 
 

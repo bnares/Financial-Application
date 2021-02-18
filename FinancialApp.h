@@ -10,9 +10,7 @@ using namespace std;
 
 class FinancialApp
 {
-
         int idOfLoggedUser;
-
 
         public:
         UserMenager userMenager;
@@ -24,19 +22,14 @@ class FinancialApp
         FinancialApp(string nazwaPlikuUzytkownicy, string nazwaPlikuDochody, string nazwaPlikuWydatki)
         : userMenager(nazwaPlikuUzytkownicy), NAZWA_PLIKU_DOCHODY(nazwaPlikuDochody), NAZWA_PLIKU_WYDATKI(nazwaPlikuWydatki)
         {
-
             loggedUserManager = NULL;
-
             idOfLoggedUser = getIdOfLoggedUser();
-
         };
-
 
         ~FinancialApp()
         {
             delete loggedUserManager;
             loggedUserManager = NULL;
-
         };
 
         int getLastUserID();
@@ -50,16 +43,9 @@ class FinancialApp
         void printLastMonthResult();
         void printResultOfSelectedPeriodOfTime();
         void changePassword();
-        //testowe
         void printExpensesDate();
         void printIncomesDate();
-
-
 };
-
-
-
-
 
 
 #endif
