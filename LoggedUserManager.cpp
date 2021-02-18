@@ -349,6 +349,7 @@ void LoggedUserManager::selectPeriodOfTime()
        cout<<"No income in this period of time"<<endl;
    }
    occurrences =0;
+   cout<<endl;
 
    cout<<"EXPENSES"<<endl;
     for(int i =0; i<expenses.size(); i++)
