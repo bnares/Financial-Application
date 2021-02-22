@@ -31,6 +31,10 @@ class Date
     int countingDaysInSpecificMonth();
     int getDateAsNumber();
     static string getTodayDate();
+    int getYear()
+    {
+        return lata;
+    };
 
 };
 

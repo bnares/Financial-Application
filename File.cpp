@@ -50,6 +50,7 @@ bool File::chceckDateWord(vector <string> date)
   Date currentDate(day, month, year);
   if(currentDate.ileDniMaMiesiac())
   {
+
     return true;
   }
   else

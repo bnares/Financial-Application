@@ -5,6 +5,7 @@ bool Date::czyJestPrzestepny()
 {
     if (lata%400 ==0 || (lata %4==0 && lata %100 !=0))
     {
+
         return true;
     }
     else
@@ -101,12 +102,13 @@ Date::Date()
 
 
 
-Date::Date(int wpiszDzien, int wpiszMiesiac, int wpiszLata): czyPrzystepny(czyJestPrzestepny())
+Date::Date(int wpiszDzien, int wpiszMiesiac, int wpiszLata)
 {
         dni =wpiszDzien;
         miesiace =wpiszMiesiac;
         lata = wpiszLata;
         liczbaLatPrzestepnych = countLeapYears();
+        czyPrzystepny = czyJestPrzestepny();
 
 }
 
